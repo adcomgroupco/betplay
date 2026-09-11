@@ -122,7 +122,7 @@
     .decision-main h3 { max-width: 800px; font-size: clamp(1.7rem, 4vw, 3.2rem); letter-spacing: -.04em }
     .decision-main p { max-width: 820px; margin: 16px 0 0 }
     .decision-side { display: flex; flex-direction: column; justify-content: space-between; padding: 28px; border-radius: var(--radius); color: var(--white); background: var(--black) }
-    .decision-side strong { color: var(--yellow); font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1; letter-spacing: -.06em }
+    .decision-side strong { color:var(--accent-fg); font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1; letter-spacing: -.06em }
     .decision-side p { margin: 16px 0 0; color: rgba(255,255,255,.72) }
 
     .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px }
@@ -143,8 +143,8 @@
     .card.dark .tag { color: var(--black); background: var(--yellow) }
 
     .callout { margin: 22px 0; padding: 22px 24px; border-radius: var(--radius); background: var(--blue-soft); border: 1px solid var(--blue) }
-    .callout.warning { background: var(--red-soft); border-left-color: var(--red) }
-    .callout.success { background: var(--green-soft); border-left-color: var(--green) }
+    .callout.warning { background: var(--red-soft); border-left-color:var(--neg) }
+    .callout.success { background: var(--green-soft); border-left-color:var(--pos) }
     .callout strong { display: block; margin-bottom: 6px }
     .callout p { margin: 0; color: var(--gray-700) }
 
@@ -160,15 +160,15 @@
     td.num, th.num { text-align: right; white-space: nowrap }
     td strong { font-weight: 700 }
     .pill { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: var(--gray-100); font-size: .75rem; font-weight: 700; white-space: nowrap }
-    .pill.bad { color: var(--red); background: var(--red-soft) }
-    .pill.good { color: var(--green); background: var(--green-soft) }
+    .pill.bad { color:var(--neg); background: var(--red-soft) }
+    .pill.good { color:var(--pos); background: var(--green-soft) }
     .pill.yellow { background: var(--yellow-soft) }
 
     .list { margin: 0; padding: 0; list-style: none }
     .list li { position: relative; padding: 10px 0 10px 30px; border-bottom: 1px solid var(--gray-200) }
     .list li:last-child { border-bottom: 0 }
-    .list li::before { content: "→"; position: absolute; left: 0; color: var(--yellow); font-weight: 800 }
-    .list-check li::before { content: "✓"; color: var(--green) }
+    .list li::before { content: "→"; position: absolute; left: 0; color:var(--accent-fg); font-weight: 800 }
+    .list-check li::before { content: "✓"; color:var(--pos) }
 
     .bars { display: grid; gap: 13px; margin-top: 24px }
     .bar-row { display: grid; grid-template-columns: 170px 1fr 92px; gap: 13px; align-items: center }
@@ -191,10 +191,10 @@
     .journey-step::after { content: "→"; position: absolute; top: 50%; right: -19px; z-index: 2; display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; color: var(--black); background: var(--yellow); font-weight: 800; transform: translateY(-50%) }
     .journey-step:last-child::after { display: none }
     .journey-step:nth-child(2), .journey-step:nth-child(3) { background: var(--yellow-soft) }
-    .journey-step:nth-child(4) { border-color: var(--yellow) }
+    .journey-step:nth-child(4) { border-color:var(--accent-fg) }
     .journey-step:nth-child(5) { color: var(--white); background: var(--black); border-color: var(--black) }
     .journey-step .stage { display: block; margin-bottom: 13px; color: var(--gray-500); font-size: .75rem; font-weight: 800 }
-    .journey-step:nth-child(5) .stage { color: var(--yellow) }
+    .journey-step:nth-child(5) .stage { color:var(--accent-fg) }
     .journey-step h3 { min-height: 45px; font-size: .98rem }
     .journey-step p { margin: 10px 0 0; color: var(--gray-700); font-size:var(--fs-body-min)}
     .journey-step:nth-child(5) p { color: rgba(255,255,255,.72) }
@@ -207,14 +207,14 @@
     .slot-copy p { margin: 13px 0 0; color: rgba(255,255,255,.72); font-size: .88rem }
     .slot-machine { padding: 18px; border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); background: rgba(255,255,255,.07); text-align: center }
     .slot-brand { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; font-size: .75rem; font-weight: 800 }
-    .slot-brand span:last-child { color: var(--yellow) }
+    .slot-brand span:last-child { color:var(--accent-fg) }
     .slot-reels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px }
     .slot-reel { display: grid; place-items: center; min-height: 112px; overflow: hidden; border: 3px solid var(--yellow); border-radius: var(--radius); color: var(--black); background: var(--white); font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1 }
     .slot-reel.spinning { animation: slotPulse .18s linear infinite alternate }
     @keyframes slotPulse { from { transform: translateY(-3px); filter: blur(1px) } to { transform: translateY(3px); filter: blur(0) } }
     .slot-action { width: 100%; margin-top: 14px; padding: 13px 18px; border: 0; border-radius: 999px; color: var(--black); background: var(--yellow); font: inherit; font-weight: 800; cursor: pointer }
     .slot-action:disabled { cursor: wait; opacity: .65 }
-    .slot-result { min-height: 24px; margin: 12px 0 0; color: var(--yellow); font-size:var(--fs-body-min); font-weight: 700 }
+    .slot-result { min-height: 24px; margin: 12px 0 0; color:var(--accent-fg); font-size:var(--fs-body-min); font-weight: 700 }
     .slot-legal { display: block; margin-top: 9px; color: rgba(255,255,255,.55); font-size:var(--fs-body-min); line-height: 1.4 }
 
     .phone-mockup { position: relative; width: min(100%, 350px); min-height: 650px; margin: 0 auto; padding: 13px; border: 3px solid #292929; border-radius: var(--radius); background: #101010; box-shadow: none }
@@ -242,7 +242,7 @@
     /* Una barra es marca de dato: no redondea (DESIGN.md, "Forma"). */
     .allocation { overflow: hidden; display: flex; height: 44px; margin: 18px 0 12px; background: var(--gray-200) }
     .allocation span { display: flex; align-items: center; justify-content: center; min-width: 38px; font-size: .75rem; font-weight: 800 }
-    .a1 { color: var(--yellow); background: var(--black) }
+    .a1 { color:var(--accent); background: var(--black) }
     .a2 { background: var(--yellow) }
     .a3 { background: #ffdc70 }
     .a4 { background: #d8d8d8 }
@@ -324,7 +324,7 @@
 </style>
 </head>
 <body>
-  <section class="portada" data-suelo="papel">
+  <section class="portada">
   <div class="portada-wrap">
     <div class="portada-copy">
       <span class="portada-kicker">BetPlay &middot; Casino</span>
@@ -925,31 +925,31 @@
 
       <h3 class="subhead">Journey de demanda a resultado</h3>
       <div class="journey" aria-label="Recorrido desde exposición en redes sociales hasta FTD y valor">
-        <article class="journey-step">
+        <article class="journey-step" data-roles="tinta">
           <span class="stage">01 · Exposición</span>
           <h3>Descubrir Casino</h3>
           <p>Video corto, creadores aprobados, entretenimiento y piezas de catálogo generan alcance adulto y atención.</p>
           <span class="owner">Redes · Contenido</span>
         </article>
-        <article class="journey-step">
+        <article class="journey-step" data-roles="tinta">
           <span class="stage">02 · Interés</span>
           <h3>Explorar un producto</h3>
           <p>Interacción, reproducción o visita identifica afinidad con Slots, Live, Ruleta o Aviator.</p>
           <span class="owner">Social · Audiencias</span>
         </article>
-        <article class="journey-step">
+        <article class="journey-step" data-roles="tinta">
           <span class="stage">03 · Consideración</span>
           <h3>Resolver confianza</h3>
           <p>Secuencia de producto, operación autorizada, experiencia móvil y juego responsable reduce incertidumbre.</p>
           <span class="owner">Social · Landing</span>
         </article>
-        <article class="journey-step">
+        <article class="journey-step" data-roles="tinta">
           <span class="stage">04 · Intención</span>
           <h3>Buscar o regresar</h3>
           <p>Search, tráfico directo y remarketing permitido recuperan al usuario con una promesa congruente.</p>
           <span class="owner">Search · Social · CRM</span>
         </article>
-        <article class="journey-step">
+        <article class="journey-step" data-roles="tinta">
           <span class="stage">05 · Resultado</span>
           <h3>Registro → FTD → valor</h3>
           <p>UX, verificación, depósito y seguimiento convierten; BI valida CPA FTD, tasa proxy → FTD y NGR D30.</p>
