@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plan de acción Google Ads | BetPlay</title>
+<link rel="stylesheet" href="assets/css/adcom-tokens.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --amarillo:#FFC000;
+      --amarillo:#ffd400;
       --negro:#000000;
       --gris-oscuro:#4F4F4F;
       --gris-medio:#8B8B8B;
@@ -18,38 +19,38 @@
       --blanco:#FFFFFF;
       --verde:#16835E;
       --rojo:#C73B32;
-      --radius:8px;
-      --shadow:0 10px 24px rgba(0,0,0,.05);
+
+      --shadow:none
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'Poppins',sans-serif;background:var(--blanco);color:var(--gris-oscuro);line-height:1.6}
     .wrapper{max-width:1320px;margin:0 auto;padding:42px 24px 64px}
     .hero{background:var(--negro);border-radius:var(--radius);padding:48px 44px;margin-bottom:18px;position:relative;overflow:hidden}
-    .hero:after{content:'';position:absolute;right:-55px;top:-70px;width:270px;height:270px;background:rgba(255,192,0,.1);border-radius:50%}
-    .hero .eyebrow{display:inline-block;background:var(--amarillo);color:var(--negro);font-size:.76rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:4px;margin-bottom:18px;position:relative;z-index:2}
-    .hero h1{color:var(--blanco);font-size:clamp(2.35rem,5vw,4rem);line-height:1.02;text-transform:uppercase;letter-spacing:-1.5px;margin-bottom:14px;max-width:900px;position:relative;z-index:2}
+    .hero:after{content:'';position:absolute;right:-55px;top:-70px;width:270px;height:270px;background:rgba(255,212,0,.1);border-radius:50%}
+    .hero .eyebrow{display:inline-block;font-weight:700;margin-bottom:18px;position:relative;z-index:2;color:var(--fg-muted);font-size:var(--fs-body-min)}
+    .hero h1{color:var(--blanco);font-size:clamp(2.35rem,5vw,4rem);line-height:1.02;letter-spacing:-1.5px;margin-bottom:14px;max-width:900px;position:relative;z-index:2}
     .hero h1 span{color:var(--amarillo)}
     .hero p{color:rgba(255,255,255,.76);max-width:940px;font-weight:300;position:relative;z-index:2}
     .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;position:relative;z-index:2}
-    .hero-meta span{border:1px solid rgba(255,255,255,.2);border-radius:999px;color:var(--blanco);padding:7px 12px;font-size:.72rem;font-weight:600}
+    .hero-meta span{border:1px solid rgba(255,255,255,.2);border-radius:999px;color:var(--blanco);padding:7px 12px;font-size:.75rem;font-weight:600}
     .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border:1px solid var(--gris-borde);border-radius:999px;padding:8px;margin:18px 0;display:flex;gap:4px;overflow:auto}
     .nav a{text-decoration:none;color:var(--gris-oscuro);font-size:.75rem;font-weight:600;white-space:nowrap;padding:8px 12px;border-radius:999px}
     .nav a:hover{background:var(--negro);color:var(--amarillo)}
     .section{margin-top:22px;scroll-margin-top:84px}
     .section-head{display:flex;gap:30px;align-items:flex-start;margin-bottom:18px}
-    .section-title{background:var(--amarillo);padding:14px 26px;border-radius:var(--radius);width:max-content;white-space:nowrap}
-    .section-title h2{font-size:1.3rem;line-height:1.1;text-transform:uppercase;color:var(--negro)}
+    .section-title{white-space:nowrap;color:var(--fg)}
+    .section-title h2{font-size:1.3rem;line-height:1.1;color:var(--negro)}
     .section-copy{padding-top:3px;max-width:800px}
-    .section-copy .subtext{font-weight:700;color:var(--gris-medio);font-size:.76rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+    .section-copy .subtext{font-weight:700;color:var(--fg-muted);font-size:var(--fs-body-min);margin-bottom:4px;max-width:var(--measure)}
     .section-copy p:last-child{font-size:.9rem;font-weight:300}
     .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .stat-card{background:var(--gris-claro);border:1px solid var(--gris-borde);border-left:4px solid var(--amarillo);border-radius:var(--radius);padding:22px 18px;box-shadow:var(--shadow)}
+    .stat-card{background:var(--gris-claro);border:1px solid var(--gris-borde);border-radius:var(--radius);padding:22px 18px;box-shadow:var(--shadow)}
     .stat-card.alert{border-left-color:var(--rojo)}
     .stat-card.good{border-left-color:var(--verde)}
     .stat-val{display:block;font-size:1.9rem;font-weight:700;color:var(--negro);line-height:1.05;margin-bottom:6px}
     .stat-label{display:block;font-size:.82rem;font-weight:600}
-    .stat-sub{display:block;font-size:.72rem;font-weight:300;color:var(--gris-medio);margin-top:4px}
+    .stat-sub{display:block;font-size:.75rem;font-weight:300;color:var(--fg-muted);margin-top:4px}
     .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .grid-three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{background:var(--gris-claro);border:1px solid var(--gris-borde);border-radius:var(--radius);padding:22px}
@@ -58,12 +59,12 @@
     .list{padding-left:18px}
     .list li{margin-bottom:9px;font-size:.86rem}
     .list li strong{color:var(--negro)}
-    .claim{background:var(--negro);color:var(--blanco);border-radius:var(--radius);padding:22px;border-left:5px solid var(--amarillo)}
+    .claim{background:var(--negro);color:var(--blanco);border-radius:var(--radius);padding:22px;border:1px solid var(--amarillo)}
     .claim strong{color:var(--amarillo)}
     .claim p{font-size:.9rem;font-weight:300}
-    .table-wrap{overflow:auto;border:1px solid var(--gris-borde);border-radius:12px;background:var(--blanco);box-shadow:var(--shadow)}
+    .table-wrap{overflow:auto;border:1px solid var(--gris-borde);border-radius:var(--radius);background:var(--blanco);box-shadow:var(--shadow)}
     table{width:100%;min-width:920px;border-collapse:separate;border-spacing:0;font-size:.82rem}
-    thead th{position:sticky;top:0;background:var(--negro);color:var(--amarillo);text-align:left;padding:13px 14px;font-weight:600;z-index:2}
+    thead th{position:sticky;top:0;text-align:left;padding:13px 14px;font-weight:600;z-index:2;background:var(--ground);color:var(--fg-muted);border-bottom:1px solid var(--rule-strong)}
     tbody td{padding:12px 14px;border-bottom:1px solid var(--gris-borde);vertical-align:top}
     tbody tr:nth-child(even){background:#FCFCFC}
     tbody tr:hover{background:#FFF8DF}
@@ -72,25 +73,25 @@
     .total-row td{font-weight:700;color:var(--negro);background:#FFF8DF}
     .delta-up{color:var(--verde);font-weight:700}
     .delta-down{color:var(--rojo);font-weight:700}
-    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:.68rem;font-weight:700;background:var(--blanco);border:1px solid var(--gris-borde);white-space:nowrap}
+    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:.75rem;font-weight:700;background:var(--blanco);border:1px solid var(--gris-borde);white-space:nowrap}
     .pill.yellow{background:#FFF8DF;border-color:#F0D77A;color:var(--negro)}
-    .pill.green{background:#EAF7F1;border-color:#B7DFCF;color:var(--verde)}
+    .pill.green{background:#EAF7F1;border-color:#B7DFCF;color:var(--pos)}
     .pill.red{background:#FFF0EE;border-color:#F1C2BD;color:var(--rojo)}
     .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .step{position:relative;background:var(--gris-claro);border:1px solid var(--gris-borde);border-radius:var(--radius);padding:19px}
     .step:before{content:attr(data-step);display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--amarillo);color:var(--negro);font-weight:700;font-size:.78rem;margin-bottom:11px}
     .step h3{font-size:.9rem;color:var(--negro);margin-bottom:6px}
-    .step p{font-size:.78rem;font-weight:300}
+    .step p{font-size:var(--fs-body-min);font-weight:300}
     .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
     .tab-btn{border:1px solid var(--gris-borde);background:var(--blanco);color:var(--negro);padding:10px 14px;border-radius:999px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer}
     .tab-btn.active{background:var(--negro);color:var(--amarillo);border-color:var(--negro)}
     .tab-panel{display:none}
     .tab-panel.active{display:block}
     .term-grid{display:flex;flex-wrap:wrap;gap:8px}
-    .term{background:var(--blanco);border:1px solid var(--gris-borde);border-radius:999px;padding:7px 11px;font-size:.72rem;font-weight:600;color:var(--negro)}
+    .term{background:var(--blanco);border:1px solid var(--gris-borde);border-radius:999px;padding:7px 11px;font-size:.75rem;font-weight:600;color:var(--negro)}
     .protocol{background:#FFFDF5;border:1px solid var(--amarillo)}
-    .footer-note{font-size:.72rem;color:var(--gris-medio);margin-top:10px}
-    footer{margin-top:28px;background:var(--negro);color:rgba(255,255,255,.62);border-radius:var(--radius);padding:22px 24px;font-size:.73rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-note{font-size:var(--fs-body-min);color:var(--fg-muted);margin-top:10px}
+    footer{margin-top:28px;background:var(--negro);color:rgba(255,255,255,.62);border-radius:var(--radius);padding:22px 24px;font-size:var(--fs-body-min);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     footer strong{color:var(--amarillo)}
     @media(max-width:980px){
       .stats-grid,.grid-two,.grid-three,.timeline{grid-template-columns:1fr}
@@ -103,7 +104,7 @@
 </head>
 <body>
   <main class="wrapper">
-    <section class="hero">
+    <section class="hero" data-suelo="tinta">
       <span class="eyebrow">Google Ads · The Brand BetPlay</span>
       <h1>Plan de acción para <span>estabilizar el CPA</span></h1>
       <p>Análisis de registros validados en GA4, lectura de la caída posterior al Mundial y bitácora de ajustes aplicados el 28 de julio de 2026. El objetivo operativo es sostener un CPA de registro cercano a COP 20.000 sin reducir el presupuesto diario total ni pausar campañas.</p>
@@ -394,8 +395,8 @@
         buttons.forEach(item => item.classList.remove('active'));
         panels.forEach(item => item.classList.remove('active'));
         button.classList.add('active');
-        document.getElementById('tab-' + button.dataset.tab).classList.add('active');
-      });
+        document.getElementById('tab-' + button.dataset.tab).classList.add('active')
+      })
     });
   </script>
 </body>

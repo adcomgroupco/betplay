@@ -1,352 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Reportes de Google Ads y GA4 de BetPlay Colombia: diagnóstico del registro y estrategia de crecimiento Casino." />
-  <title>BetPlay · Analítica de medios 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Índice de los documentos de la cuenta BetPlay Colombia.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f4f1">
+  <title>BetPlay | Documentos</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --yellow: #FFC000;
-      --yellow-soft: #fff5cf;
-      --black: #111111;
-      --white: #ffffff;
-      --gray: #6b6b6b;
-      --soft: #f6f6f6;
-      --line: rgba(17,17,17,.08);
-      --radius: 22px;
-      --shadow: 0 20px 60px rgba(0,0,0,.08);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(255,192,0,.18), transparent 30%),
-        linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
-      color: var(--black);
-      min-height: 100vh;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-    }
-
-    .shell {
-      width: 100%;
-      max-width: 1180px;
-      background: rgba(255,255,255,.88);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-    }
-
-    .hero {
-      padding: 72px;
-      position: relative;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: var(--yellow);
-      color: var(--black);
-      font-size: .9rem;
-      font-weight: 700;
-      margin-bottom: 26px;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      line-height: .95;
-      letter-spacing: -2px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-
-    .lead {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--gray);
-      max-width: 620px;
-      margin-bottom: 34px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 38px;
-    }
-
-    .btn {
-      appearance: none;
-      border: 0;
-      text-decoration: none;
-      border-radius: 999px;
-      padding: 16px 24px;
-      font-weight: 600;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-    .btn:focus-visible { outline: 3px solid var(--black); outline-offset: 3px; }
-
-    .btn-primary {
-      background: var(--black);
-      color: var(--yellow);
-      box-shadow: 0 14px 30px rgba(0,0,0,.14);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--black);
-      border: 1px solid var(--line);
-    }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 640px;
-    }
-
-    .mini-card {
-      background: var(--soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-    }
-
-    .mini-card span {
-      display: block;
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--gray);
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .mini-card strong {
-      font-size: 1rem;
-      line-height: 1.35;
-    }
-
-    .panel {
-      background: var(--black);
-      color: var(--white);
-      padding: 72px 52px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 32px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .panel::before,
-    .panel::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,192,0,.12);
-    }
-
-    .panel::before {
-      width: 260px;
-      height: 260px;
-      top: -90px;
-      right: -80px;
-    }
-
-    .panel::after {
-      width: 180px;
-      height: 180px;
-      bottom: -60px;
-      left: -50px;
-    }
-
-    .panel-top {
-      position: relative;
-      z-index: 1;
-    }
-
-    .panel-label {
-      font-size: .85rem;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      color: rgba(255,255,255,.7);
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    .panel h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 1.05;
-      letter-spacing: -1px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-
-    .panel p {
-      color: rgba(255,255,255,.76);
-      line-height: 1.75;
-      font-size: .98rem;
-      max-width: 380px;
-    }
-
-    .route-list {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .route-card {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 28px;
-      padding: 24px;
-      transition: background .2s ease, border-color .2s ease;
-    }
-
-    .route-card:hover {
-      background: rgba(255,255,255,.1);
-      border-color: rgba(255,192,0,.4);
-    }
-
-    .route-card small {
-      display: block;
-      color: rgba(255,255,255,.55);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: 12px;
-      font-weight: 600;
-      font-size: .72rem;
-    }
-
-    .route-card strong {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
-
-    .route-card p {
-      font-size: .88rem;
-      line-height: 1.65;
-    }
-
-    .route-card a {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--yellow);
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 16px;
-    }
-
-    .route-card a:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
-
-    .route-card.featured {
-      background: rgba(255,192,0,.14);
-      border-color: rgba(255,192,0,.45);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-      .btn:hover { transform: none; }
-    }
-
-    @media (max-width: 980px) {
-      .shell { grid-template-columns: 1fr; }
-      .hero, .panel { padding: 42px 28px; }
-      .mini-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/adcom.css">
+  <script defer src="assets/js/adcom.js"></script>
 </head>
 <body>
-  <main class="page">
-    <section class="shell">
-      <div class="hero">
-        <div class="eyebrow">BetPlay · Google Ads + GA4</div>
-        <h1>Analítica de medios 2026</h1>
-        <p class="lead">
-          Los reportes de la cuenta de BetPlay Colombia en un solo lugar: el diagnóstico del registro
-          —por qué cayó en agosto y qué redistribuir sin subir el presupuesto diario— y la estrategia
-          de crecimiento para Casino, con la demanda del Planificador de Palabras Clave.
-        </p>
+<a class="skip-link" href="#top">Ir a los documentos</a>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="./diagnostico-registro-agosto-2026.html">Abrir diagnóstico del registro</a>
-          <a class="btn btn-secondary" href="./reporte-casino-google-ads-2026.html">Ver estrategia Casino</a>
-          <a class="btn btn-secondary" href="./plan-accion-google-ads.html">Archivo histórico</a>
-        </div>
+<header class="masthead">
+  <a class="wordmark" href="index.html"><i></i>BetPlay <span>documentos</span></a>
+  <nav aria-label="Documentos">
+    <a href="./diagnostico-registro-agosto-2026.html">Diagnóstico del registro</a>
+    <a href="./reporte-casino-google-ads-2026.html">Estrategia de crecimiento Casino</a>
+    <a href="./plan-accion-google-ads.html">Plan de acción, archivo histórico</a>
+  </nav>
+  <span class="stamp">Google Ads + GA4</span>
+</header>
 
-        <div class="mini-grid">
-          <article class="mini-card">
-            <span>Archivo</span>
-            <strong>2 reportes vigentes</strong>
-          </article>
-          <article class="mini-card">
-            <span>Tipo</span>
-            <strong>Diagnóstico, demanda y medios</strong>
-          </article>
-          <article class="mini-card">
-            <span>Acceso</span>
-            <strong>Google Ads + GA4 + Keyword Planner</strong>
-          </article>
-        </div>
-      </div>
+<main id="top">
 
-      <aside class="panel">
-        <div class="panel-top">
-          <div class="panel-label">Contenido destacado</div>
-          <h2>El registro es el resultado clave</h2>
-          <p>
-            El CPA por registro está estable; lo que se apagó fue el volumen. El diagnóstico fecha las
-            causas y registra la redistribución aplicada el 20 de agosto, con el tope diario intacto.
-          </p>
-        </div>
+<section class="opening wrap">
+  <h1>Documentos de la cuenta</h1>
+  <p class="lede">Diagnóstico de registro y estrategia de Casino de BetPlay Colombia, en un solo lugar.</p>
 
-        <div class="route-list">
-          <div class="route-card featured">
-            <small>Más reciente · 20 de agosto de 2026</small>
-            <strong>Diagnóstico del registro</strong>
-            <p>Cinco causas fechadas, economía por campaña y las acciones ya aplicadas en la cuenta, sin mover el tope diario.</p>
-            <a href="./diagnostico-registro-agosto-2026.html">Ir al diagnóstico →</a>
-          </div>
+</section>
 
-          <div class="route-card">
-            <small>2 de agosto de 2026</small>
-            <strong>Estrategia de crecimiento Casino</strong>
-            <p>Mapa de 5.372 ideas de búsqueda, nueva estructura de campañas y plan de activación de 90 días.</p>
-            <a href="./reporte-casino-google-ads-2026.html">Ir al reporte unificado →</a>
-          </div>
-        </div>
-      </aside>
-    </section>
-  </main>
+<section class="grupo wrap" id="documentos">
+  <div class="shelf">
+    <a class="card" href="./diagnostico-registro-agosto-2026.html">
+      <p class="kind">Diagnóstico</p>
+      <h2>Diagnóstico del registro</h2>
+      <span class="go">Abrir <svg class="ico" aria-hidden="true"><use href="#i-abrir"></use></svg></span>
+    </a>
+
+    <a class="card" href="./reporte-casino-google-ads-2026.html">
+      <p class="kind">Estrategia</p>
+      <h2>Estrategia de crecimiento Casino</h2>
+      <span class="go">Abrir <svg class="ico" aria-hidden="true"><use href="#i-abrir"></use></svg></span>
+    </a>
+
+    <a class="card" href="./plan-accion-google-ads.html">
+      <p class="kind">Archivo</p>
+      <h2>Plan de acción, archivo histórico</h2>
+      <span class="go">Abrir <svg class="ico" aria-hidden="true"><use href="#i-abrir"></use></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="colophon wrap">
+  <dl>
+    <dt>Cuenta</dt><dd>BetPlay, Colombia</dd>
+    <dt>Uso</dt>
+    <dd>Abrir <code>index.html</code> en el navegador, o servir la carpeta con
+    <code>python -m http.server</code></dd>
+    <dt>Alcance</dt>
+    <dd>Documentos internos de la cuenta</dd>
+  </dl>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>BetPlay, biblioteca de documentos</span>
+  <span>Colombia. Juega con control, +18</span>
+</footer>
+
 </body>
 </html>
