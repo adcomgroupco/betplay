@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyecto para llevar el evento de Primer Deposito desde la fuente de informacion de BetPlay hasta las plataformas de medios, y optimizar campanas sobre una senal mas cercana al valor del negocio." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>BetPlay - Medicion de Primer Deposito (FTD)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/adcom.css">
+  <script defer src="assets/js/adcom.js"></script>
+  <style>
+    .codigo{padding-top:24px; border-top:2px solid var(--rule-strong)}
+    .codigo h3{font-size:1.3rem; margin:0 0 12px}
+    .codigo .note{margin-bottom:16px}
+    .codigo-peticion{
+      font-family:var(--fuente-mono); font-size:.8rem; line-height:1.5;
+      color:var(--ink-secondary); margin:0 0 10px; overflow-wrap:anywhere}
+    .codigo-peticion b{color:var(--ink); font-weight:700}
+    .codigo pre{
+      margin:0; padding:18px 20px; overflow-x:auto; background:var(--sunken);
+      border:0; border-left:2px solid var(--rule-strong)}
+    .codigo code{
+      font-family:var(--fuente-mono); font-size:.78rem; line-height:1.65;
+      color:var(--ink-secondary); white-space:pre}
+    @media (max-width:560px){ .codigo pre{padding:14px} }
+  </style>
+</head>
+<body class="con-shell">
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <nav class="app-sidebar">
+    <div class="app-sidebar-top">
+      <a class="app-sidebar-brand" href="index.html"><i></i>Adcom</a>
+      <div class="app-sidebar-client">
+        <span class="app-sidebar-client-label">Cliente</span>
+        <strong class="app-sidebar-client-name">BetPlay Colombia</strong>
+        <span class="app-sidebar-client-period">Propuesta, septiembre 2026</span>
+      </div>
+    </div>
+    <div class="app-sidebar-nav">
+      <span class="app-sidebar-nav-title">Contenido</span>
+      <a href="#contexto"><b></b>Contexto<small>01</small></a>
+      <a href="#porque"><b></b>Por qué ahora<small>02</small></a>
+      <a href="#metodologia"><b></b>Cómo viaja el dato<small>03</small></a>
+      <a href="#identidad"><b></b>La pieza crítica<small>04</small></a>
+      <a href="#datos"><b></b>Datos mínimos<small>05</small></a>
+      <a href="#fases"><b></b>Fases<small>06</small></a>
+      <a href="#decisiones"><b></b>Qué necesitamos<small>07</small></a>
+    </div>
+    <div class="app-sidebar-foot">Uso interno, no compartir sin autorización</div>
+  </nav>
+
+  <div class="app-main">
+    <div class="app-topbar">
+      <span class="app-topbar-crumb">Medición de Primer Depósito</span>
+      <span class="app-topbar-section">Contexto</span>
+    </div>
+
+    <main class="app-content wrap" id="contenido">
+      <header class="opening">
+        <h1>Medición de <em>Primer Depósito</em></h1>
+        <p class="lede">Hoy las campañas se optimizan sobre el registro, que es lo que las plataformas pueden ver. El primer depósito, que es lo que de verdad indica que un usuario vale, vive fuera de su alcance. Este documento propone un MVP para conectarlos.</p>
+        <div class="opening-meta">
+          <div><b>Propuesta</b><span>Estado</span></div>
+          <div><b>MVP: Google Ads primero, Meta después</b><span>Alcance</span></div>
+          <div><b>Primer Depósito (FTD)</b><span>Evento</span></div>
+          <div><b>UserID</b><span>Identificador</span></div>
+          <div><b>Mesa técnica</b><span>Siguiente paso</span></div>
+        </div>
+      </header>
+
+      <hr class="divider">
+
+      <section class="grupo" id="contexto">
+      <div class="head">
+        <h2>Las plataformas optimizan lo que pueden ver, y no es lo que más importa</h2>
+        <p class="lede">Meta, Google y TikTok aprenden de las señales que reciben. Hoy reciben clics, visitas y registros, porque todo eso ocurre en el sitio y se puede etiquetar. El primer depósito no: ocurre después, en los sistemas internos de BetPlay, y desde la plataforma de medios es invisible.</p>
+      </div>
+
+      <div class="duo">
+        <div class="panel">
+          <h3>Lo que ven hoy</h3>
+          <p>Clics en anuncios, visitas al sitio, registros completados y algunas conversiones web. Todo eso es real y sirve, pero mide intención, no resultado: un registro es alguien que dijo que sí, no alguien que trajo dinero.</p>
+        </div>
+        <div class="panel">
+          <h3>Lo que no ven</h3>
+          <p>Cuál de esos registros acabó depositando. Sin esa señal, dos campañas que entregan el mismo número de registros parecen iguales aunque una traiga usuarios que depositan y la otra no. La plataforma optimiza hacia la que da registros más baratos, que puede ser la peor.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>La brecha no es de medición, es de decisión.</h3>
+        <p>El problema no es que falte un dato en un informe: es que el sistema de pujas de cada plataforma está aprendiendo, todos los días, a conseguir más de lo que le pedimos. Si le pedimos registros, va a encontrar registros baratos. Solo cuando le pidamos depósitos va a buscar usuarios que depositen.</p>
+      </div>
+    </section>
+
+      <section class="grupo" id="porque">
+      <div class="head">
+        <h2>Por qué este proyecto ahora, y no en abstracto</h2>
+        <p class="lede">No es una mejora teórica de medición. Resuelve un problema concreto que la operación de Google Ads viene arrastrando y que ya está documentado en el informe de optimizaciones de este mes.</p>
+      </div>
+
+      <div class="duo">
+        <div class="panel">
+          <h3>Hoy el registro se puja con un valor inventado</h3>
+          <p>Las campañas usan estrategias de puja por valor porque rinden mejor, pero el registro no tiene un valor económico definido. Se le asignó uno convencional para que el sistema pueda operar. Funciona, y es una decisión consciente, pero significa que el objetivo de rentabilidad es en realidad un objetivo de costo disfrazado.</p>
+        </div>
+        <div class="panel">
+          <h3>El primer depósito es ese valor</h3>
+          <p>Si sabemos qué proporción de los registros de cada campaña acaba depositando, y cuánto deposita, el valor deja de ser convencional. A partir de ahí un objetivo de rentabilidad significa lo que dice, y se puede comparar Google con el resto de la inversión en los mismos términos.</p>
+        </div>
+        <div class="panel">
+          <h3>Ya sabemos que no todos los registros valen igual</h3>
+          <p>La cuenta lo mostró este mes: las búsquedas que no nombran la marca cuestan quince veces más por registro que las que sí. Ese tipo de diferencia solo se puede gestionar cuando se mide, y el depósito es la medida que falta para saber si además esos registros valen menos.</p>
+        </div>
+      </div>
+      
+    </section>
+
+      <section class="grupo" id="metodologia">
+      <div class="head">
+        <h2>Cómo viaja el dato, y en qué se parece a lo que ya funciona</h2>
+        <p class="lede">Hoy la etiqueta de Google y el píxel de Meta viven en el navegador: cuando alguien visita o se registra, el navegador avisa a la plataforma. Este proyecto no reemplaza eso, le suma un segundo camino en el que el aviso sale de un servidor en vez de un navegador. Misma plataforma, mismo mecanismo de reconocimiento y mismo tipo de conversión; lo que cambia es quién la manda y cuándo.</p>
+      </div>
+
+      <figure class="figure">
+        <div class="table-scroll">
+          <svg viewBox="0 0 1584 740" width="1584"
+               role="img" aria-labelledby="dg-t dg-d" style="max-width:100%;height:auto">
+            <title id="dg-t">Cómo viaja el dato de primer depósito</title>
+            <desc id="dg-d">Comparación de dos caminos. Hoy, el navegador del usuario envía el evento a través de la etiqueta de Google y el píxel de Meta, y las plataformas reciben visita y registro pero no el depósito. Con el proyecto, la fuente de información entrega el primer depósito con su UserID a una capa de envío de Adcom, que lo normaliza y lo manda por API a Google Ads con Enhanced Conversions en la primera fase, y a Meta con Conversions API en la segunda.</desc>
+            <defs><marker id="punta" viewBox="0 0 10 10" refX="9" refY="5"
+              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="var(--ink)"/></marker></defs>
+            <rect x="1" y="26" width="1582" height="170" rx="2" fill="var(--sunken)" fill-opacity="0.25" stroke="var(--rule-strong)" stroke-width="1"/><text x="14" y="16" font-size="12.5" font-weight="700" fill="var(--fg-secondary)">Hoy: el aviso sale del navegador</text><rect x="1" y="246" width="1582" height="482" rx="2" fill="var(--sunken)" fill-opacity="0.5" stroke="var(--ink)" stroke-width="2"/><text x="14" y="236" font-size="12.5" font-weight="700" fill="var(--fg-secondary)">Con este proyecto: el aviso sale del servidor</text><rect x="12" y="60" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="162.0" y="90" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">Usuario en el sitio</text><text x="162.0" y="110" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Llega por un anuncio</text><text x="162.0" y="125" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">y se registra</text><rect x="432" y="60" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="582.0" y="90" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">Etiqueta y píxel</text><line x1="446" y1="142" x2="718" y2="142" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="582.0" y="162" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">gtag() · fbq()</text><text x="582.0" y="110" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Corren en el navegador</text><text x="582.0" y="125" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">del propio usuario</text><rect x="852" y="60" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="1002.0" y="90" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">Google Ads y Meta</text><text x="1002.0" y="110" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Reciben visita y registro.</text><text x="1002.0" y="125" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">El depósito no lo ven</text><rect x="12" y="280" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="162.0" y="310" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">1. El clic</text><line x1="26" y1="362" x2="298" y2="362" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="162.0" y="382" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">gclid · fbclid</text><text x="162.0" y="330" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">La URL del anuncio trae</text><text x="162.0" y="345" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">el identificador</text><rect x="432" y="280" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="582.0" y="310" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">2. El registro</text><line x1="446" y1="362" x2="718" y2="362" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="582.0" y="382" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">UserID + gclid + fbc</text><text x="582.0" y="330" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Nace el UserID y se guarda</text><text x="582.0" y="345" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">junto al identificador</text><rect x="852" y="280" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="1002.0" y="310" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">3. El depósito</text><line x1="866" y1="362" x2="1138" y2="362" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="1002.0" y="382" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">es_primero = true</text><text x="1002.0" y="330" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">La fuente lo anota con su</text><text x="1002.0" y="345" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">ID de transacción</text><rect x="1272" y="280" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="1422.0" y="310" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">4. La entrega</text><line x1="1286" y1="362" x2="1558" y2="362" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="1422.0" y="382" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">JSON por lote</text><text x="1422.0" y="330" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Los confirmados del día</text><text x="1422.0" y="345" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">anterior, una vez al día</text><rect x="12" y="436" width="300" height="116" rx="2" fill="var(--accent)" stroke="var(--ink)" stroke-width="2"/><text x="162.0" y="466" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--accent-ink)">5. Normaliza y cifra</text><line x1="26" y1="518" x2="298" y2="518" stroke="var(--accent-ink)" stroke-width="1" stroke-opacity=".45"/><text x="162.0" y="538" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--accent-ink)">sha256(correo)</text><text x="162.0" y="486" text-anchor="middle" font-size="11.5" fill="var(--accent-ink)">Minúsculas, teléfono</text><text x="162.0" y="501" text-anchor="middle" font-size="11.5" fill="var(--accent-ink)">internacional, SHA-256</text><rect x="432" y="436" width="300" height="116" rx="2" fill="var(--accent)" stroke="var(--ink)" stroke-width="2"/><text x="582.0" y="466" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--accent-ink)">6. Deduplica</text><line x1="446" y1="518" x2="718" y2="518" stroke="var(--accent-ink)" stroke-width="1" stroke-opacity=".45"/><text x="582.0" y="538" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--accent-ink)">orderId · event_id</text><text x="582.0" y="486" text-anchor="middle" font-size="11.5" fill="var(--accent-ink)">Por ID de transacción,</text><text x="582.0" y="501" text-anchor="middle" font-size="11.5" fill="var(--accent-ink)">para no contar dos veces</text><rect x="852" y="436" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="1002.0" y="466" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">7. Google Ads</text><line x1="866" y1="518" x2="1138" y2="518" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="1002.0" y="538" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">POST :uploadClickConversions</text><text x="1002.0" y="486" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Enhanced Conversions</text><rect x="852" y="592" width="300" height="116" rx="2" fill="var(--ground)" stroke="var(--ink)" stroke-width="1"/><text x="1002.0" y="622" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--ink)">8. Meta</text><line x1="866" y1="674" x2="1138" y2="674" stroke="var(--rule)" stroke-width="1" stroke-opacity=".45"/><text x="1002.0" y="694" text-anchor="middle" font-size="10.5" font-family="var(--fuente-mono)" fill="var(--fg-secondary)">POST /{dataset}/events</text><text x="1002.0" y="642" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">Conversions API, al mismo</text><text x="1002.0" y="657" text-anchor="middle" font-size="11.5" fill="var(--fg-secondary)">conjunto de datos del píxel</text><path d="M312 118.0 L424 118.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><path d="M732 118.0 L844 118.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><text x="792.0" y="110.0" text-anchor="middle" font-size="11" fill="var(--fg-muted)">al instante</text><path d="M312 338.0 L424 338.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><path d="M732 338.0 L844 338.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><path d="M1152 338.0 L1264 338.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><path d="M1422.0 396 L1422.0 416.0 L162.0 416.0 L162.0 428" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><text x="792.0" y="409.0" text-anchor="middle" font-size="11" fill="var(--fg-muted)">sigue abajo</text><path d="M312 494.0 L424 494.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><path d="M732 494.0 L844 494.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><text x="792.0" y="486.0" text-anchor="middle" font-size="11" fill="var(--fg-muted)">fase 1</text><path d="M732 494.0 L792.0 494.0 L792.0 650.0 L844 650.0" fill="none" stroke="var(--ink)" stroke-width="1.6" marker-end="url(#punta)"/><text x="792.0" y="564.0" text-anchor="middle" font-size="11" fill="var(--fg-muted)">fase 2</text>
+          </svg>
+        </div>
+        <figcaption>Las dos vías conviven. La etiqueta y el píxel siguen haciendo su trabajo; lo que se agrega es el camino de servidor, que es el único por el que puede llegar un evento que no ocurre en el navegador.
+          <span class="sr-only"> Secuencia: Usuario en el sitio (Llega por un anuncio, y se registra) &rarr; Etiqueta y píxel (Corren en el navegador, del propio usuario) &rarr; Google Ads y Meta (Reciben visita y registro., El depósito no lo ven) &rarr; 1. El clic (La URL del anuncio trae, el identificador) &rarr; 2. El registro (Nace el UserID y se guarda, junto al identificador) &rarr; 3. El depósito (La fuente lo anota con su, ID de transacción) &rarr; 4. La entrega (Los confirmados del día, anterior, una vez al día) &rarr; 5. Normaliza y cifra (Minúsculas, teléfono, internacional, SHA-256) &rarr; 6. Deduplica (Por ID de transacción,, para no contar dos veces) &rarr; 7. Google Ads (Enhanced Conversions) &rarr; 8. Meta (Conversions API, al mismo, conjunto de datos del píxel)</span>
+        </figcaption>
+      </figure>
+
+      <h3>Qué pone cada parte</h3>
+      <p class="note">La capa de envío la ponemos nosotros: es la herramienta, y ya la operamos para otras cuentas. Lo que no podemos poner es el dato ni el permiso para usarlo.</p>
+      <div class="table-scroll">
+        <table>
+          
+          <thead><tr><th scope="col">Pieza</th><th scope="col">Quién la pone</th><th scope="col">Qué implica</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">El evento de primer depósito</th><td><b>BetPlay</b></td><td>Una entrega diaria con UserID, monto, fecha y estado del depósito</td></tr><tr><th scope="row">El identificador de clic en el registro</th><td><b>BetPlay</b></td><td>Guardar junto al UserID el identificador que trae la URL del anuncio. Es un cambio en el registro y se hace una sola vez</td></tr><tr><th scope="row">Los permisos de datos de contacto</th><td><b>BetPlay</b></td><td>Confirmar bajo qué consentimiento se pueden enviar correo o teléfono cifrados</td></tr><tr><th scope="row">La capa de envío</th><td><b>Adcom</b></td><td>Lee la entrega, normaliza, cifra los identificadores y deduplica por ID de transacción</td></tr><tr><th scope="row">La integración con cada plataforma</th><td><b>Adcom</b></td><td>Enhanced Conversions en Google Ads y Conversions API en Meta, con reintentos y control de errores</td></tr><tr><th scope="row">El seguimiento de la coincidencia</th><td><b>Adcom</b></td><td>Medir cuántos eventos se envían y qué porcentaje reconoce cada plataforma, que es el indicador que dice si esto sirve</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="codigo">
+        <h3>Lo que se envía a Google Ads</h3>
+        <p class="note">Una llamada por lote, con todos los depósitos del día. El campo orderId lleva el ID de la transacción: es lo que impide que un reenvío cuente el mismo depósito dos veces.</p>
+        <p class="codigo-peticion"><b>POST</b> https://googleads.googleapis.com/v24/customers/7142864193:uploadClickConversions</p>
+        <pre><code>{
+  &quot;conversions&quot;: [
+    {
+      &quot;conversionAction&quot;: &quot;customers/7142864193/conversionActions/&lt;id&gt;&quot;,
+      &quot;conversionDateTime&quot;: &quot;2026-09-24 14:32:11-05:00&quot;,
+      &quot;conversionValue&quot;: 50000,
+      &quot;currencyCode&quot;: &quot;COP&quot;,
+      &quot;orderId&quot;: &quot;TX-88213144&quot;,
+      &quot;userIdentifiers&quot;: [
+        { &quot;hashedEmail&quot;: &quot;e3b0c44298fc1c14...&quot; },
+        { &quot;hashedPhoneNumber&quot;: &quot;a1d0c6e83f027327...&quot; }
+      ]
+    }
+  ],
+  &quot;partialFailure&quot;: true
+}
+</code></pre>
+      </div>
+
+      <div class="codigo">
+        <h3>Lo que se envía a Meta</h3>
+        <p class="note">La misma información, con los nombres que usa Meta. Aquí el que evita el doble conteo es event_id, y cumple exactamente el papel que orderId cumple en Google.</p>
+        <p class="codigo-peticion"><b>POST</b> https://graph.facebook.com/v21.0/&lt;dataset_id&gt;/events</p>
+        <pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;event_name&quot;: &quot;FirstDeposit&quot;,
+      &quot;event_time&quot;: 1790000331,
+      &quot;event_id&quot;: &quot;TX-88213144&quot;,
+      &quot;action_source&quot;: &quot;website&quot;,
+      &quot;user_data&quot;: {
+        &quot;em&quot;: [&quot;e3b0c44298fc1c14...&quot;],
+        &quot;ph&quot;: [&quot;a1d0c6e83f027327...&quot;],
+        &quot;external_id&quot;: [&quot;7f9a1c33b25e0a41...&quot;],
+        &quot;fbc&quot;: &quot;fb.1.1790000000.IwAR...&quot;
+      },
+      &quot;custom_data&quot;: {
+        &quot;value&quot;: 50000,
+        &quot;currency&quot;: &quot;COP&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+      </div>
+
+      <h3>La misma pieza, con dos nombres</h3>
+      <p class="note">Las dos llamadas dicen lo mismo. Verlas una al lado de la otra ahorra la mitad de la conversación técnica, porque lo que se resuelva para una plataforma se traduce casi directo a la otra.</p>
+      <div class="table-scroll">
+        <table>
+          
+          <thead><tr><th scope="col">Qué es</th><th scope="col">En Google Ads</th><th scope="col">En Meta</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">El evento</th><td><b>conversionAction</b></td><td><b>event_name</b></td></tr><tr><th scope="row">Cuándo ocurrió</th><td><b>conversionDateTime</b></td><td><b>event_time</b></td></tr><tr><th scope="row">Cuánto vale</th><td><b>conversionValue + currencyCode</b></td><td><b>custom_data.value + currency</b></td></tr><tr><th scope="row">Evitar el doble conteo</th><td><b>orderId</b></td><td><b>event_id</b></td></tr><tr><th scope="row">Reconocer al usuario</th><td><b>userIdentifiers.hashedEmail</b></td><td><b>user_data.em</b></td></tr><tr><th scope="row">El identificador del clic</th><td><b>gclid</b></td><td><b>fbc, que se arma con el fbclid</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h3>Ni la etiqueta ni el píxel se tocan.</h3>
+        <p>Es importante decirlo porque suele ser la primera preocupación: esto no sustituye el etiquetado actual ni obliga a rehacerlo. La etiqueta de Google y el píxel de Meta siguen exactamente como están, midiendo lo que ya miden. El camino de servidor se suma al lado, y en el caso de Meta entrega al mismo conjunto de datos, de modo que un evento que llegara por las dos vías se reconoce como uno solo y no se cuenta dos veces. Con eso en pie, en Google se puede pujar a depósito en vez de a registro y darle al registro su valor real, y en Meta construir audiencias sobre quienes sí depositaron.</p>
+      </div>
+    </section>
+
+      <section class="grupo" id="identidad">
+      <div class="head">
+        <h2>La pieza que decide si esto funciona no es el depósito: es el vínculo</h2>
+        <p class="lede">Conviene decirlo de entrada, porque cambia a quién hay que preguntarle qué. Tener el evento de primer depósito no basta. Lo que hace que la plataforma pueda usarlo es poder reconocer que ese usuario es el mismo que hizo clic en un anuncio. Hay dos caminos y no son equivalentes.</p>
+      </div>
+
+      <h3>Los dos caminos para reconocer al usuario</h3>
+      <p class="note">Se pueden combinar, y lo habitual es usar el primero cuando existe y el segundo como respaldo.</p>
+      <div class="table-scroll">
+        <table>
+          
+          <thead><tr><th scope="col">Camino</th><th scope="col">Qué exige</th><th scope="col">Precisión</th><th scope="col">Cuándo elegirlo</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Identificador de clic</th><td>Capturar el identificador que la plataforma pone en la URL del anuncio y guardarlo junto al UserID en el momento del registro</td><td><b>Alta</b></td><td>Es el camino preferido. Exige un cambio en el registro, pero es el único que ata el depósito al anuncio exacto</td></tr><tr><th scope="row">Datos de contacto</th><td>Enviar correo o teléfono cifrados, bajo los permisos y consentimientos que correspondan</td><td class="is-neg"><b>Media</b></td><td>Sirve cuando no hay identificador de clic guardado, o para depósitos de usuarios registrados antes de este proyecto</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel panel-hi">
+        <h3>Si hoy no se guarda el identificador de clic, ese es el primer arreglo.</h3>
+        <p>Es un cambio pequeño y se hace una sola vez, pero no es retroactivo: los usuarios que se registraron sin que se guardara no se pueden recuperar por esa vía. Cuanto antes se implemente, antes empieza a acumularse el histórico que hace útil todo lo demás. Mientras tanto, el camino de datos de contacto permite arrancar sin bloquear el proyecto.</p>
+      </div>
+    </section>
+
+      <section class="grupo" id="datos">
+      <div class="head">
+        <h2>Qué necesitamos que traiga cada evento</h2>
+        <p class="lede">Lo mínimo para que el evento sea utilizable. La disponibilidad real de cada campo es justamente lo que hay que confirmar con el equipo técnico.</p>
+      </div>
+
+      <h3>Campos del evento de primer depósito</h3>
+      <p class="note">Los tres primeros son indispensables. El resto mejora la calidad de la medición pero no bloquea el arranque.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>La disponibilidad de cada campo se valida en la mesa técnica.</caption>
+          <thead><tr><th scope="col">Campo</th><th scope="col">Para qué sirve</th><th scope="col">¿Indispensable?</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">UserID</th><td>Identificar al usuario dentro de BetPlay y unirlo con el resto de la información</td><td><b>Sí</b></td></tr><tr><th scope="row">ID de transacción</th><td>Evitar que un mismo depósito se cuente dos veces si el envío se repite</td><td><b>Sí</b></td></tr><tr><th scope="row">Fecha y hora</th><td>Ubicar la conversión en el tiempo y permitir que la plataforma la atribuya a su ventana correcta</td><td><b>Sí</b></td></tr><tr><th scope="row">Valor del depósito</th><td>Optimizar por valor y no solo por cantidad de depósitos</td><td>Recomendado</td></tr><tr><th scope="row">Moneda</th><td>Normalizar el valor, sobre todo si hay más de una</td><td>Recomendado</td></tr><tr><th scope="row">Estado del depósito</th><td>Enviar solo depósitos confirmados y no los que fallaron o se revirtieron</td><td>Recomendado</td></tr><tr><th scope="row">Identificador de clic</th><td>Atribuir el depósito al anuncio exacto que lo originó</td><td>Recomendado</td></tr><tr><th scope="row">Correo o teléfono cifrados</th><td>Reconocer al usuario cuando no hay identificador de clic, bajo los permisos que correspondan</td><td>Opcional</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </section>
+
+      <section class="grupo" id="fases">
+      <div class="head">
+        <h2>Cómo crece si funciona</h2>
+        <p class="lede">Cada fase depende de que la anterior haya demostrado algo. No hay compromiso de llegar a la última: la decisión de avanzar se toma con el resultado de la anterior en la mano.</p>
+      </div>
+
+      <div class="rules">
+        <div class="rule-col">
+          <h3>1. Google Ads</h3>
+          <span class="note">El MVP, con Enhanced Conversions</span>
+          <ol>
+            <li><p>Una fuente, un evento, entrega diaria hacia Google Ads.</p></li>
+            <li><p>Lo que se mide: cuántos eventos llegan y qué porcentaje reconoce la plataforma.</p></li>
+            <li><p>Criterio de éxito: que el reconocimiento alcance para que el dato sirva como señal de puja.</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>2. Meta</h3>
+          <span class="note">El mismo evento, por Conversions API</span>
+          <ol>
+            <li><p>Se reutiliza la misma entrega y la misma capa de envío: solo cambia la integración de destino.</p></li>
+            <li><p>El evento entra al mismo conjunto de datos del píxel, con deduplicación por identificador de evento.</p></li>
+            <li><p>Se compara el reconocimiento entre las dos plataformas, que no tiene por qué ser igual.</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>3. Automatizar</h3>
+          <span class="note">Si el reconocimiento funciona</span>
+          <ol>
+            <li><p>El evento deja de entregarse por lotes y pasa a enviarse cerca del momento en que ocurre.</p></li>
+            <li><p>Se estabiliza el proceso y se le pone monitoreo, para que un fallo silencioso no pase inadvertido.</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>4. Optimizar</h3>
+          <span class="note">El objetivo de todo esto</span>
+          <ol>
+            <li><p>Las campañas dejan de optimizar a registro y pasan a optimizar a depósito, o a registro ponderado por su probabilidad de depositar.</p></li>
+            <li><p>El valor de conversión deja de ser convencional y pasa a ser el valor real medido.</p></li>
+          </ol>
+        </div>
+      </div>
+      
+    </section>
+
+      <section class="grupo" id="decisiones">
+      <div class="head">
+        <h2>Qué necesitamos de BetPlay para arrancar</h2>
+        <p class="lede">Una mesa técnica corta, con quien conozca dónde vive el dato de depósito y quien pueda tocar el registro del sitio. De esa reunión tiene que salir una respuesta a cada una de estas preguntas.</p>
+      </div>
+
+      <div class="rules">
+        <div class="rule-col">
+          <h3>Sobre el dato</h3>
+          <span class="note">BetPlay</span>
+          <ol>
+            <li><p>¿Qué sistema tiene el evento de primer depósito asociado a un UserID? ¿Uno solo, o hay que unir varios?</p></li>
+            <li><p>¿Puede entregarse por API, webhook o archivo diario?</p></li>
+            <li><p>¿Qué campos de la tabla de datos mínimos están disponibles hoy?</p></li>
+            <li><p>¿Se puede distinguir con certeza el primer depósito de los siguientes?</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>Sobre la identidad</h3>
+          <span class="note">BetPlay y Adcom</span>
+          <ol>
+            <li><p>¿Se guarda hoy el identificador de clic en el momento del registro? Si no, ¿qué implica guardarlo?</p></li>
+            <li><p>¿Se pueden enviar correo o teléfono cifrados, y bajo qué consentimiento?</p></li>
+            <li><p>¿Qué restricciones legales o de privacidad aplican al envío de estos datos a un tercero?</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>Sobre el piloto</h3>
+          <span class="note">Adcom</span>
+          <ol>
+            <li><p>Empezamos por Google Ads, donde la cuenta ya opera con conversiones de registro y el depósito entra en una estructura que existe. Meta va después, con la misma entrega.</p></li>
+            <li><p>¿Quién es el responsable técnico por cada lado?</p></li>
+            <li><p>¿Qué volumen de depósitos diarios esperamos, para saber si alcanza a producir una señal medible?</p></li>
+          </ol>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>La pregunta que abre o cierra el proyecto.</h3>
+        <p>¿Puede la fuente de información entregarnos el evento de primer depósito asociado a un UserID y a un identificador que la plataforma de medios sea capaz de reconocer? Si la respuesta es sí, hay MVP sin necesidad de intervenir todo el sitio. Si es no, el primer trabajo es hacer que lo sea, y conviene saberlo antes de planear nada más.</p>
+      </div>
+    </section>
+
+      <footer class="footer">
+        <span>BetPlay &middot; Medición de Primer Depósito &middot; propuesta de septiembre de 2026</span>
+        <span>Documento de trabajo, sujeto a validación técnica</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
