@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffd400">
+<title>TikTok Ads - BetPlay Colombia</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/adcom.css">
+<script defer src="assets/js/adcom.js"></script>
+<style>
+/* El sistema compartido resuelve tipografia, color, shell y ritmo. */
+.opening h1{max-width:14ch}
+.global-bar{padding-block:var(--s-5); border-block:1px solid var(--rule); margin-bottom:var(--s-7)}
+.global-bar .title{max-width:var(--measure); color:var(--fg-secondary); font-size:.88rem; margin-bottom:var(--s-4)}
+.global-grid,.stat-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--rule); border-left:1px solid var(--rule)}
+.stat{min-width:0; padding:18px; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule)}
+.stat .label{font-size:var(--fs-min); font-weight:600; color:var(--fg-muted); margin-bottom:var(--s-2)}
+.stat .value{font-size:clamp(1.15rem,2vw,1.65rem); line-height:1.15; font-weight:700; overflow-wrap:anywhere}
+.stat.highlight .value{color:var(--accent-fg)}
+
+h2.section{font-size:clamp(1.9rem,4.2vw,3.4rem); max-width:20ch; margin:0 0 18px}
+.section-subtitle{max-width:var(--measure); margin:0 0 var(--s-5); color:var(--fg-secondary); font-size:1rem; line-height:1.65}
+.section-title{margin:var(--s-5) 0 var(--s-3); font-size:1.1rem; font-weight:700}
+.explainer{max-width:var(--measure); margin-block:var(--s-4); color:var(--fg-secondary); font-size:.96rem; line-height:1.7}
+.no-data-note,.caveat{color:var(--fg-muted); font-size:var(--fs-body-min); line-height:1.65}
+
+.adgroup-card{padding-block:var(--s-6); border-top:2px solid var(--rule-strong)}
+.adgroup-head{margin-bottom:var(--s-4)}
+.adgroup-name{display:flex; flex-wrap:wrap; align-items:center; gap:var(--s-3)}
+.pill{font-size:1.25rem; font-weight:700}
+.badge{display:inline-flex; align-items:center; min-height:28px; padding:5px 9px; border:1px solid var(--rule); border-radius:var(--radius-sm); color:var(--fg-secondary); font-size:var(--fs-min); font-weight:600}
+.badge.volume,.badge.efficiency{border-color:var(--accent-fg); color:var(--accent-fg)}
+
+.ads-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:var(--s-4); margin-top:var(--s-3)}
+.ad-card{display:grid; gap:var(--s-3); align-content:start; min-width:0; padding:var(--s-3); border:1px solid var(--rule); border-radius:var(--radius); background:var(--raised)}
+.ad-rank{font-size:var(--fs-min); font-weight:600; color:var(--fg-muted)}
+.phone{width:min(100%,190px); aspect-ratio:9/16; margin-inline:auto; padding:6px; border-radius:var(--radius); overflow:hidden; background:var(--inv-ground)}
+.phone .screen{width:100%; height:100%; overflow:hidden; border-radius:var(--radius-sm); background:var(--inv-ground)}
+.phone video,.phone img{width:100%; height:100%; object-fit:cover; display:block}
+.ad-name{min-height:2.6em; font-size:.82rem; line-height:1.45; font-weight:700; overflow-wrap:anywhere}
+.ad-metrics{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-2); color:var(--fg-muted); font-size:var(--fs-min)}
+.ad-metrics b{display:block; margin-top:3px; color:var(--fg); font-size:.78rem; overflow-wrap:anywhere}
+
+.conclusions{border-top:2px solid var(--rule-strong)}
+.conclusions ol{margin:0; padding:0; counter-reset:item; display:grid}
+.conclusions li{list-style:none; counter-increment:item; display:grid; grid-template-columns:42px minmax(0,1fr); gap:var(--s-3); padding-block:var(--s-4); border-bottom:1px solid var(--rule); color:var(--fg-secondary); line-height:1.7}
+.conclusions li::before{content:counter(item,decimal-leading-zero); color:var(--accent-fg); font-weight:700}
+.caveat{max-width:var(--measure); margin-top:var(--s-5)}
+
+@media (max-width:760px){
+  .global-grid,.stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ads-grid{grid-template-columns:1fr}
+  .ad-card{grid-template-columns:minmax(120px,160px) minmax(0,1fr); align-items:start}
+  .ad-card .ad-rank{grid-column:1/-1}
+  .ad-card .phone{grid-row:2/5; width:100%}
+  .ad-metrics{grid-template-columns:1fr}
+  .conclusions li{grid-template-columns:32px minmax(0,1fr)}
+}
+@media (max-width:440px){
+  .global-grid,.stat-grid{grid-template-columns:1fr}
+  .ad-card{grid-template-columns:1fr}
+  .ad-card .phone{grid-row:auto; width:min(100%,190px)}
+}
+</style>
+</head>
+<body class="con-shell">
+<a class="skip-link" href="#contenido">Ir al contenido</a>
+
+<nav class="app-sidebar">
+  <div class="app-sidebar-top">
+    <a class="app-sidebar-brand" href="index.html"><i></i>Adcom</a>
+    <div class="app-sidebar-client">
+      <span class="app-sidebar-client-label">Cliente</span>
+      <strong class="app-sidebar-client-name">BetPlay Colombia</strong>
+      <span class="app-sidebar-client-period">1 - 17 sep 2026</span>
+    </div>
+  </div>
+  <div class="app-sidebar-nav">
+    <span class="app-sidebar-nav-title">Contenido</span>
+    <a href="#resumen"><b></b>Resumen<small>01</small></a>
+    <a href="#conjuntos"><b></b>Conjuntos<small>02</small></a>
+    <a href="#conclusiones"><b></b>Conclusiones<small>03</small></a>
+  </div>
+  <div class="app-sidebar-foot">Uso interno, no compartir sin autorización</div>
+</nav>
+
+<div class="app-main">
+  <div class="app-topbar">
+    <span class="app-topbar-crumb">TikTok Ads</span>
+    <span class="app-topbar-section">Resumen</span>
+  </div>
+
+<main class="app-content wrap" id="contenido">
+  <header class="opening">
+    <h1>TikTok Ads: registros y <em>piezas ganadoras</em></h1>
+    <p class="lede">Cómo fue la pauta en TikTok Ads en conjunto durante el periodo, y de ahí el desglose por cada
+    conjunto de anuncios: cuánto gastó, cuántos registros a la landing page de BetPlay logró y cuáles fueron sus
+    mejores anuncios.</p>
+    <div class="opening-meta">
+      <div><b>1 - 17 de septiembre de 2026</b><span>Periodo</span></div>
+      <div><b>BetPlay Colombia</b><span>Cuenta</span></div>
+      <div><b>TikTok Ads</b><span>Plataforma</span></div>
+      <div><b>Registros a la landing page</b><span>Objetivo</span></div>
+    </div>
+  </header>
+
+  <hr class="divider">
+
+
+<div class="global-bar">
+  <div class="title">Total de la campaña &quot;2. Conversiones - Registros - Adcom&quot; &middot; 1 de septiembre al 17 de septiembre de 2026</div>
+  <div class="global-grid"><div class="stat highlight"><div class="label">Gastado en el periodo</div><div class="value">$27.394.078</div></div><div class="stat"><div class="label">Impresiones</div><div class="value">23.266.887</div></div><div class="stat"><div class="label">Clicks</div><div class="value">37.691</div></div><div class="stat"><div class="label">CTR</div><div class="value">0.16%</div></div><div class="stat highlight"><div class="label">Registros logrados</div><div class="value">8.039</div></div><div class="stat highlight"><div class="label">Costo por registro</div><div class="value">$3.408</div></div></div>
+</div>
+
+
+<section class="grupo" id="resumen">
+<h2 class="section">Visión general de la pauta en el periodo</h2>
+<div class="section-subtitle">Cómo fue la campaña en conjunto antes de bajar a cada grupo de anuncios</div>
+<div class="explainer" style="margin-bottom:18px;">En el periodo analizado (1 de septiembre al 17 de septiembre de 2026), la campaña &quot;2. Conversiones - Registros - Adcom&quot; invirtió $27.394.078 y generó 8.039 registros a un costo de $3.408 por registro. El objetivo de esta campaña es registros a la landing page de BetPlay. El anuncio &quot;bono 1_wFh6KabC.mp4_Bono de Bienvenida&quot; es el que mejor funciona de toda la campaña, con 33% de sus registros.</div>
+<div class="section-title">Mejores anuncios de toda la campaña</div>
+<div class="ads-grid"><div class="ad-card"><div class="ad-rank">#1 de la campaña</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000daar7tnog65oh76d69og.jpg"><source src="assets/media/tiktok/v10033g50000daar7tnog65oh76d69og.mp4" type="video/mp4"></video></div></div><div class="ad-name">bono 1_wFh6KabC.mp4_Bono de Bienvenida</div><div class="ad-metrics"><div>Registros<b>2.683</b></div><div>Gasto<b>$11.223.626</b></div><div>Costo/reg.<b>$4.183</b></div></div></div><div class="ad-card"><div class="ad-rank">#2 de la campaña</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000dafeaf7og65iqhj364b0.jpg"><source src="assets/media/tiktok/v10033g50000dafeaf7og65iqhj364b0.mp4" type="video/mp4"></video></div></div><div class="ad-name">TORNEO LOL.mp4_TONEO DE LOL</div><div class="ad-metrics"><div>Registros<b>985</b></div><div>Gasto<b>$3.845.096</b></div><div>Costo/reg.<b>$3.904</b></div></div></div><div class="ad-card"><div class="ad-rank">#3 de la campaña</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000dafeaf7og65p4u72djqg.jpg"><source src="assets/media/tiktok/v10033g50000dafeaf7og65p4u72djqg.mp4" type="video/mp4"></video></div></div><div class="ad-name">BONO DE BIENVENIDA.mov_BONO DE BIENVENIDA</div><div class="ad-metrics"><div>Registros<b>967</b></div><div>Gasto<b>$2.047.164</b></div><div>Costo/reg.<b>$2.117</b></div></div></div></div>
+
+
+</section>
+
+<section class="grupo" id="conjuntos">
+<h2 class="section">Conjuntos de anuncios activos</h2>
+<div class="section-subtitle">Cada conjunto con su gasto, resultados y mejores anuncios dentro de "2. Conversiones - Registros - Adcom"</div>
+
+<div class="adgroup-card">
+  <div class="adgroup-head">
+    <div class="adgroup-name"><span class="pill">solicitud pauta: septiembre</span><span class="badge volume">&#9733; Mejor conjunto (más registros)</span></div>
+  </div>
+  <div class="stat-grid"><div class="stat highlight"><div class="label">Gastado</div><div class="value">$8.998.262</div></div><div class="stat"><div class="label">Impresiones</div><div class="value">7.329.439</div></div><div class="stat"><div class="label">Clicks</div><div class="value">11.960</div></div><div class="stat"><div class="label">CTR</div><div class="value">0.16%</div></div><div class="stat highlight"><div class="label">Registros</div><div class="value">3.444</div></div><div class="stat highlight"><div class="label">Costo/registro</div><div class="value">$2.613</div></div></div>
+  <div class="explainer">Este conjunto de anuncios gastó $8.998.262 y generó 3.444 registros, a un costo de $2.613 por registro. El anuncio "TORNEO LOL.mp4_TONEO DE LOL" es el que mejor funciona dentro de este conjunto, con 29% de sus registros.</div>
+  <div class="section-title">Mejores anuncios de este conjunto</div>
+  <div class="ads-grid"><div class="ad-card"><div class="ad-rank">#1 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000dafeaf7og65iqhj364b0.jpg"><source src="assets/media/tiktok/v10033g50000dafeaf7og65iqhj364b0.mp4" type="video/mp4"></video></div></div><div class="ad-name">TORNEO LOL.mp4_TONEO DE LOL</div><div class="ad-metrics"><div>Registros<b>985</b></div><div>Gasto<b>$3.845.096</b></div><div>Costo/reg.<b>$3.904</b></div></div></div><div class="ad-card"><div class="ad-rank">#2 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000dafeaf7og65p4u72djqg.jpg"><source src="assets/media/tiktok/v10033g50000dafeaf7og65p4u72djqg.mp4" type="video/mp4"></video></div></div><div class="ad-name">BONO DE BIENVENIDA.mov_BONO DE BIENVENIDA</div><div class="ad-metrics"><div>Registros<b>967</b></div><div>Gasto<b>$2.047.164</b></div><div>Costo/reg.<b>$2.117</b></div></div></div></div>
+</div>
+
+<div class="adgroup-card">
+  <div class="adgroup-head">
+    <div class="adgroup-name"><span class="pill">solicitud pauta: Bono de Bienvenida-Agosto 2026</span></div>
+  </div>
+  <div class="stat-grid"><div class="stat highlight"><div class="label">Gastado</div><div class="value">$11.223.626</div></div><div class="stat"><div class="label">Impresiones</div><div class="value">9.326.974</div></div><div class="stat"><div class="label">Clicks</div><div class="value">16.584</div></div><div class="stat"><div class="label">CTR</div><div class="value">0.18%</div></div><div class="stat highlight"><div class="label">Registros</div><div class="value">2.683</div></div><div class="stat highlight"><div class="label">Costo/registro</div><div class="value">$4.183</div></div></div>
+  <div class="explainer">Este conjunto de anuncios gastó $11.223.626 y generó 2.683 registros, a un costo de $4.183 por registro. El anuncio "bono 1_wFh6KabC.mp4_Bono de Bienvenida" es el que mejor funciona dentro de este conjunto, con 100% de sus registros.</div>
+  <div class="section-title">Mejores anuncios de este conjunto</div>
+  <div class="ads-grid"><div class="ad-card"><div class="ad-rank">#1 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000daar7tnog65oh76d69og.jpg"><source src="assets/media/tiktok/v10033g50000daar7tnog65oh76d69og.mp4" type="video/mp4"></video></div></div><div class="ad-name">bono 1_wFh6KabC.mp4_Bono de Bienvenida</div><div class="ad-metrics"><div>Registros<b>2.683</b></div><div>Gasto<b>$11.223.626</b></div><div>Costo/reg.<b>$4.183</b></div></div></div></div>
+</div>
+
+<div class="adgroup-card">
+  <div class="adgroup-head">
+    <div class="adgroup-name"><span class="pill">solicitud pauta: agosto (2)</span></div>
+  </div>
+  <div class="stat-grid"><div class="stat highlight"><div class="label">Gastado</div><div class="value">$4.297.270</div></div><div class="stat"><div class="label">Impresiones</div><div class="value">3.940.814</div></div><div class="stat"><div class="label">Clicks</div><div class="value">5.679</div></div><div class="stat"><div class="label">CTR</div><div class="value">0.14%</div></div><div class="stat highlight"><div class="label">Registros</div><div class="value">1.007</div></div><div class="stat highlight"><div class="label">Costo/registro</div><div class="value">$4.267</div></div></div>
+  <div class="explainer">Este conjunto de anuncios gastó $4.297.270 y generó 1.007 registros, a un costo de $4.267 por registro. El anuncio "3.mp4_Video 3" es el que mejor funciona dentro de este conjunto, con 25% de sus registros.</div>
+  <div class="section-title">Mejores anuncios de este conjunto</div>
+  <div class="ads-grid"><div class="ad-card"><div class="ad-rank">#1 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000da86em7og65s7n9fetv0.jpg"><source src="assets/media/tiktok/v10033g50000da86em7og65s7n9fetv0.mp4" type="video/mp4"></video></div></div><div class="ad-name">3.mp4_Video 3</div><div class="ad-metrics"><div>Registros<b>250</b></div><div>Gasto<b>$1.643.243</b></div><div>Costo/reg.<b>$6.573</b></div></div></div><div class="ad-card"><div class="ad-rank">#2 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000da86em7og65ol5a11qfg.jpg"><source src="assets/media/tiktok/v10033g50000da86em7og65ol5a11qfg.mp4" type="video/mp4"></video></div></div><div class="ad-name">2.mp4_Video 2</div><div class="ad-metrics"><div>Registros<b>214</b></div><div>Gasto<b>$797.298</b></div><div>Costo/reg.<b>$3.726</b></div></div></div></div>
+</div>
+
+<div class="adgroup-card">
+  <div class="adgroup-head">
+    <div class="adgroup-name"><span class="pill">solicitud pauta: septiembre (2)</span><span class="badge efficiency">&#9889; Más eficiente (menor costo/registro)</span></div>
+  </div>
+  <div class="stat-grid"><div class="stat highlight"><div class="label">Gastado</div><div class="value">$1.654.031</div></div><div class="stat"><div class="label">Impresiones</div><div class="value">1.482.430</div></div><div class="stat"><div class="label">Clicks</div><div class="value">1.992</div></div><div class="stat"><div class="label">CTR</div><div class="value">0.13%</div></div><div class="stat highlight"><div class="label">Registros</div><div class="value">684</div></div><div class="stat highlight"><div class="label">Costo/registro</div><div class="value">$2.418</div></div></div>
+  <div class="explainer">Este conjunto de anuncios gastó $1.654.031 y generó 684 registros, a un costo de $2.418 por registro. El anuncio "TORNEOS DIARIOS 1.mp4_Torneos diarios" es el que mejor funciona dentro de este conjunto, con 29% de sus registros.</div>
+  <div class="section-title">Mejores anuncios de este conjunto</div>
+  <div class="ads-grid"><div class="ad-card"><div class="ad-rank">#1 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000dak3u87og65ukp0fria0.jpg"><source src="assets/media/tiktok/v10033g50000dak3u87og65ukp0fria0.mp4" type="video/mp4"></video></div></div><div class="ad-name">TORNEOS DIARIOS 1.mp4_Torneos diarios</div><div class="ad-metrics"><div>Registros<b>201</b></div><div>Gasto<b>$519.287</b></div><div>Costo/reg.<b>$2.584</b></div></div></div><div class="ad-card"><div class="ad-rank">#2 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000dak3u8fog65ve78tisv0.jpg"><source src="assets/media/tiktok/v10033g50000dak3u8fog65ve78tisv0.mp4" type="video/mp4"></video></div></div><div class="ad-name">Ya conocían los TorneosDiarios de CasinoBetPlay Les cuento cómo hacerlo en ApuestaCasino. @betp.mp4_Ya conocias</div><div class="ad-metrics"><div>Registros<b>161</b></div><div>Gasto<b>$282.352</b></div><div>Costo/reg.<b>$1.754</b></div></div></div></div>
+</div>
+
+<div class="adgroup-card">
+  <div class="adgroup-head">
+    <div class="adgroup-name"><span class="pill">solicitud pauta: festival cordillera</span></div>
+  </div>
+  <div class="stat-grid"><div class="stat highlight"><div class="label">Gastado</div><div class="value">$1.220.889</div></div><div class="stat"><div class="label">Impresiones</div><div class="value">1.187.230</div></div><div class="stat"><div class="label">Clicks</div><div class="value">1.476</div></div><div class="stat"><div class="label">CTR</div><div class="value">0.12%</div></div><div class="stat highlight"><div class="label">Registros</div><div class="value">221</div></div><div class="stat highlight"><div class="label">Costo/registro</div><div class="value">$5.524</div></div></div>
+  <div class="explainer">Este conjunto de anuncios gastó $1.220.889 y generó 221 registros, a un costo de $5.524 por registro. El anuncio "participa aquí_V2_upV4m3ve.mp4_Festiva cordilera" es el que mejor funciona dentro de este conjunto, con 52% de sus registros.</div>
+  <div class="section-title">Mejores anuncios de este conjunto</div>
+  <div class="ads-grid"><div class="ad-card"><div class="ad-rank">#1 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000da4ascnog65u35r6l18g.jpg"><source src="assets/media/tiktok/v10033g50000da4ascnog65u35r6l18g.mp4" type="video/mp4"></video></div></div><div class="ad-name">participa aquí_V2_upV4m3ve.mp4_Festiva cordilera</div><div class="ad-metrics"><div>Registros<b>116</b></div><div>Gasto<b>$421.843</b></div><div>Costo/reg.<b>$3.637</b></div></div></div><div class="ad-card"><div class="ad-rank">#2 del conjunto</div><div class="phone"><div class="screen"><video controls preload="none" muted loop playsinline poster="assets/media/tiktok/v10033g50000da4ascnog65tte5b4nsg.jpg"><source src="assets/media/tiktok/v10033g50000da4ascnog65tte5b4nsg.mp4" type="video/mp4"></video></div></div><div class="ad-name">FINAL COMP_DpCnM3PS.mp4_Festiva cordilera</div><div class="ad-metrics"><div>Registros<b>105</b></div><div>Gasto<b>$799.046</b></div><div>Costo/reg.<b>$7.610</b></div></div></div></div>
+</div>
+
+
+
+  </section>
+
+  <section class="grupo" id="conclusiones">
+  <h2 class="section">Conclusiones</h2>
+  <div class="conclusions"><ol><li>En estos 17 días, BetPlay Colombia le puso $27.394.078 a TikTok Ads en la campaña &quot;2. Conversiones - Registros - Adcom&quot;, cuyo trabajo es traer registros a la landing page de BetPlay. El resultado: 8.039 registros, a $3.408 por cabeza y un CTR de 0.16%, que es un buen indicador de que el creativo sí logra detener el scroll. En términos simples, la plata sí está trayendo gente a la landing, y a un costo que vale la pena mirar con calma en los siguientes puntos.</li><li>La campaña se reparte en 5 conjuntos de anuncios distintos, y no todos jalan igual. El que más registros trajo fue &quot;solicitud pauta: septiembre&quot;, con 3.444 registros por $8.998.262 de gasto. Es, sin duda, el caballito de batalla del canal en este momento.</li><li>Ahora, ojo con esto: el que más volumen trae no es el más barato. Ese título se lo lleva &quot;solicitud pauta: septiembre (2)&quot;, que está consiguiendo cada registro a $2.418, casi la mitad de lo que cuesta en el conjunto líder ($2.613). Es una señal clara de que vale la pena probar moviéndole más presupuesto a este conjunto eficiente y ver si aguanta ese costo bajo al crecer, en vez de asumir a ciegas que hay que seguir invirtiendo más en el que ya tiene más volumen.</li><li>En el otro extremo está &quot;solicitud pauta: festival cordillera&quot;, el conjunto que menos entregó: solo 221 registros con $1.220.889 de gasto (costándole $5.524 cada uno). No necesariamente hay que apagarlo de una, pero sí merece una revisada de creativo y segmentación antes de seguirle metiendo presupuesto sin mejorar.</li><li>Si hablamos de un solo anuncio, el que más dio la talla en toda la campaña fue &quot;bono 1_wFh6KabC.mp4_Bono de Bienvenida&quot;, con 2.683 registros él solo. Vale la pena revisar si su conjunto tiene margen de presupuesto para escalarlo un poco más mientras siga rindiendo, antes de que la audiencia se sature de verlo y el costo empiece a subir.</li><li>Viendo el día a día, el gasto se mantuvo bastante parejo, alrededor de $1.611.416 diarios en promedio, sin sustos ni cortes raros de presupuesto. El día más fuerte en registros fue el 7 de septiembre, con 656 registros, mientras que el 5 de septiembre fue el más flojo, con solo 265. Vale la pena revisar qué pasó ese día bueno (algún evento, promoción o simplemente el creativo que pegó más fuerte) para tratar de repetirlo.</li><li>En resumen: la campaña está cumpliendo su objetivo de registros a la landing page de BetPlay de forma estable, pero hay una oportunidad clara de optimizar el reparto del presupuesto entre conjuntos en vez de dejarlo como está. El siguiente paso lógico es mover algo de plata hacia el conjunto más eficiente, ponerle ojo al más débil, y seguir alimentando el anuncio ganador mientras siga dando resultados.</li></ol></div>
+
+  <div class="caveat">
+    Nota: los videos y sus portadas se conservan como copias locales de las piezas consultadas en TikTok Ads para
+    que el informe siga siendo reproducible. No se incluye sección de presupuesto/cumplimiento porque esa
+    información no está disponible todavía para este canal. Las conversiones
+    de TikTok Ads tienen ventana de atribución: los números de días recientes pueden seguir subiendo levemente
+    en los próximos días a medida que se atribuyen conversiones tardías, aunque el periodo ya haya "cerrado".
+  </div>
+
+  </section>
+</main>
+
+<footer class="footer">BetPlay Colombia &middot; TikTok Ads &middot; Generado el 18 de septiembre de 2026 &middot; Responsable: equipo de medios pagos ADCOM</footer>
+</div>
+</body>
+</html>
