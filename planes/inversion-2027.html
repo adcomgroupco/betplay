@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resumen ejecutivo de los escenarios de inversión digital BetPlay 2027 y sustento estratégico de la propuesta recomendada.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f4f1">
+  <link rel="icon" href="data:,">
+  <title>BetPlay | Plan de inversión · 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/adcom-tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ground);
+      color: var(--fg);
+      font-family: var(--fuente);
+      font-size: 16px;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    svg { display: block; }
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -80px;
+      z-index: 100;
+      padding: 10px 14px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 16px; }
+    .wrap {
+      width: min(1240px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 66px;
+      padding: 0 var(--gutter);
+      border-bottom: 1px solid var(--rule);
+      background: color-mix(in srgb, var(--ground) 94%, transparent);
+      backdrop-filter: blur(14px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 15px;
+      height: 15px;
+      background: var(--accent);
+      border: 2px solid var(--fg);
+      transform: rotate(45deg);
+    }
+    .brand small {
+      color: var(--fg-muted);
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+    .nav {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav a {
+      padding: 20px 0;
+      color: var(--fg-secondary);
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav a:hover, .nav a:focus-visible { color: var(--fg); }
+    .print-button {
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 1px solid var(--fg);
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: var(--fg);
+      cursor: pointer;
+      font-size: .76rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .print-button:hover, .print-button:focus-visible { background: var(--fg); color: var(--ground); }
+    .hero {
+      min-height: calc(100dvh - 66px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.22fr) minmax(330px, .78fr);
+      gap: clamp(40px, 7vw, 110px);
+      align-items: center;
+      padding-block: clamp(48px, 6vw, 84px);
+    }
+    .hero > * { min-width: 0; }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--fg-muted);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--fg-muted);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 850px;
+      margin-bottom: 26px;
+      font-size: clamp(3rem, 5.4vw, 5.5rem);
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+    .hero h1 em {
+      position: relative;
+      z-index: 0;
+      font-style: normal;
+      white-space: nowrap;
+    }
+    .hero h1 em::after {
+      content: "";
+      position: absolute;
+      left: -.02em;
+      right: -.04em;
+      bottom: .05em;
+      z-index: -1;
+      height: .18em;
+      background: var(--accent);
+    }
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 760px;
+      margin-bottom: 34px;
+      color: var(--fg-secondary);
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    }
+    .hero-panel {
+      position: relative;
+      padding: clamp(28px, 4vw, 52px);
+      border: 1px solid var(--fg);
+      border-radius: var(--radius);
+      background: var(--raised);
+      box-shadow: 12px 12px 0 var(--accent);
+    }
+    .scenario-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 34px;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .recommended {
+      padding: 5px 9px;
+      border-radius: var(--radius-sm);
+      background: var(--accent);
+      color: var(--accent-ink);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .hero-total {
+      margin: 0 0 4px;
+      font-size: clamp(2.2rem, 3.4vw, 3.7rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+    .hero-unit { margin: 0 0 36px; color: var(--fg-muted); font-size: .83rem; }
+    .hero-thesis {
+      margin: 0;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
+      color: var(--fg-secondary);
+      font-size: .92rem;
+    }
+    .section {
+      padding-block: clamp(78px, 9vw, 126px);
+      border-top: 1px solid var(--rule-strong);
+    }
+    .section-head {
+      display: block;
+      margin-bottom: clamp(38px, 5vw, 68px);
+    }
+    .section h2 {
+      max-width: 900px;
+      margin: 0 0 18px;
+      font-size: clamp(2.3rem, 5vw, 5rem);
+      line-height: .97;
+      letter-spacing: -.045em;
+    }
+    .section-intro { max-width: 720px; margin: 0; color: var(--fg-secondary); font-size: 1rem; }
+    .scenario-stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, .75fr);
+      gap: 18px;
+      margin-bottom: 50px;
+    }
+    .scenario-main, .scenario-alt {
+      min-height: 340px;
+      padding: clamp(26px, 4vw, 48px);
+      border-radius: var(--radius);
+    }
+    .scenario-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .75fr);
+      gap: 38px;
+      background: var(--fg);
+      color: var(--ground);
+    }
+    .scenario-alt { border: 1px solid var(--rule-strong); background: var(--raised); }
+    .scenario-main .kicker { color: var(--inv-secondary); }
+    .scenario-main h3, .scenario-alt h3 {
+      margin-bottom: 12px;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+    .big-number {
+      margin: 16px 0 8px;
+      font-size: clamp(2.4rem, 5vw, 5.2rem);
+      font-weight: 800;
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+    .scenario-alt .big-number { font-size: clamp(2rem, 3.5vw, 3.7rem); }
+    .scenario-note { color: var(--inv-secondary); font-size: .84rem; }
+    .scenario-alt .scenario-note { color: var(--fg-muted); }
+    .mix-list { display: grid; gap: 15px; align-content: center; }
+    .mix-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--inv-rule);
+      font-size: .82rem;
+    }
+    .mix-row b { color: var(--accent); font-size: 1rem; }
+    .scenario-alt .delta {
+      display: inline-block;
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      color: var(--fg-secondary);
+      font-size: .86rem;
+    }
+    .scenario-alt .delta strong { display: block; color: var(--fg); font-size: 1.35rem; }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, .55fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .figure {
+      margin: 0;
+      padding: 24px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: var(--raised);
+    }
+    .figure-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+    .figure h3 { margin: 0; font-size: 1.15rem; letter-spacing: -.02em; }
+    .figure figcaption, .caption { margin-top: 14px; color: var(--fg-muted); font-size: .76rem; }
+    .legend { display: flex; flex-wrap: wrap; gap: 14px; color: var(--fg-muted); font-size: .72rem; font-weight: 700; }
+    .legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .swatch { width: 11px; height: 11px; background: var(--serie-1); }
+    .swatch.p2 { background: var(--serie-2); }
+    .chart-scroll { overflow-x: auto; }
+    .chart-scroll svg { min-width: 760px; width: 100%; height: auto; }
+    .mini-table { width: 100%; border-collapse: collapse; }
+    .mini-table th, .mini-table td { padding: 12px 0; border-bottom: 1px solid var(--rule); text-align: left; font-size: .8rem; }
+    .mini-table th { color: var(--fg-muted); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+    .mini-table td:last-child, .mini-table th:last-child { text-align: right; }
+    .mini-table .positive { color: var(--pos); font-weight: 700; }
+    .mini-table .negative { color: var(--neg); font-weight: 700; }
+    .table-wrap { margin-top: 28px; overflow-x: auto; border-top: 1px solid var(--rule-strong); }
+    .comparison-table { min-width: 800px; width: 100%; border-collapse: collapse; }
+    .comparison-table th, .comparison-table td { padding: 15px 12px; border-bottom: 1px solid var(--rule); text-align: right; font-size: .8rem; }
+    .comparison-table th { color: var(--fg-muted); font-size: .69rem; letter-spacing: .06em; text-transform: uppercase; }
+    .comparison-table th:first-child, .comparison-table td:first-child { padding-left: 0; text-align: left; font-weight: 700; }
+    .comparison-table th:last-child, .comparison-table td:last-child { padding-right: 0; }
+    .comparison-table tfoot td { border-top: 2px solid var(--fg); border-bottom: 0; font-weight: 800; }
+    .strategy {
+      overflow: hidden;
+      background: var(--sunken);
+      color: var(--fg);
+    }
+    .strategy .section-intro { color: var(--fg-secondary); }
+    .strategy h2 { max-width: 1050px; }
+    .strategy h2 mark { padding: 0 .08em; background: var(--accent); color: var(--accent-ink); }
+    .thesis {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(330px, 1.05fr);
+      gap: clamp(40px, 8vw, 100px);
+      align-items: start;
+    }
+    .thesis-copy > p { color: var(--fg-secondary); font-size: clamp(1rem, 1.5vw, 1.25rem); }
+    .thesis-quote {
+      margin: 34px 0 0;
+      padding: 24px 0 0 24px;
+      border-top: 1px solid var(--rule);
+      border-left: 5px solid var(--accent);
+      color: var(--fg);
+      font-size: clamp(1.25rem, 2.4vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+    .demand-system { display: grid; gap: 10px; }
+    .demand-step {
+      display: grid;
+      grid-template-columns: 54px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+    }
+    .demand-step:nth-child(2) { margin-left: 6%; }
+    .demand-step:nth-child(3) { margin-left: 12%; border-color: var(--accent-fg); }
+    .step-num { color: var(--accent-fg); font-size: .78rem; font-weight: 800; }
+    .demand-step strong { display: block; margin-bottom: 3px; font-size: 1rem; }
+    .demand-step p { margin: 0; color: var(--fg-secondary); font-size: .78rem; }
+    .step-share { color: var(--accent-fg); font-size: 1.3rem; font-weight: 800; }
+    .strategy-divider { margin-block: clamp(70px, 8vw, 110px); border: 0; border-top: 1px solid var(--rule); }
+    .allocation-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr); gap: 60px; align-items: center; }
+    .allocation-grid h3 { margin-bottom: 12px; font-size: clamp(1.8rem, 3.3vw, 3.2rem); line-height: 1.05; letter-spacing: -.04em; }
+    .allocation-grid p { max-width: 680px; color: var(--fg-secondary); }
+    .stacked {
+      display: flex;
+      width: 100%;
+      min-height: 72px;
+      margin: 32px 0 20px;
+      border: 1px solid var(--rule);
+      overflow: hidden;
+    }
+    .stacked span {
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      color: #fcfcfa;
+      font-size: .7rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .stacked .capture { background: #2a78d6; }
+    .stacked .create { background: #1baf7a; }
+    .stacked .assist { background: #eb6834; }
+    .stacked .amplify { background: #807b72; }
+    .stack-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+    .stack-legend div { display: grid; grid-template-columns: 12px 1fr; gap: 10px; color: var(--fg-secondary); font-size: .75rem; }
+    .stack-legend i { width: 12px; height: 12px; margin-top: 3px; background: currentColor; }
+    .google-split {
+      padding: 28px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: var(--raised);
+    }
+    .google-split .big-number { color: var(--accent-fg); font-size: clamp(2.4rem, 4vw, 4.4rem); }
+    .google-split dl { margin: 26px 0 0; }
+    .google-split dl div { display: grid; grid-template-columns: 1fr auto; gap: 18px; padding: 13px 0; border-top: 1px solid var(--rule); }
+    .google-split dt { color: var(--fg-secondary); font-size: .78rem; }
+    .google-split dd { margin: 0; font-weight: 800; }
+    .evidence-layout { display: grid; grid-template-columns: minmax(280px, .42fr) minmax(0, .58fr); gap: clamp(40px, 7vw, 90px); align-items: start; }
+    .evidence-summary { position: sticky; top: 100px; }
+    .evidence-summary h3 { margin-bottom: 18px; font-size: clamp(1.8rem, 3.2vw, 3rem); line-height: 1.05; letter-spacing: -.04em; }
+    .evidence-summary p { color: var(--fg-secondary); }
+    .source-note { padding-top: 18px; border-top: 1px solid var(--rule); color: var(--fg-muted); font-size: .73rem; }
+    .evidence-list { counter-reset: signal; }
+    .signal {
+      counter-increment: signal;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 28px;
+      padding: 30px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .signal:first-child { border-top: 1px solid var(--rule-strong); }
+    .signal-value { font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 800; line-height: 1; letter-spacing: -.04em; }
+    .signal h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .signal p { margin-bottom: 10px; color: var(--fg-secondary); font-size: .87rem; }
+    .signal a { color: var(--fg-muted); font-size: .72rem; font-weight: 700; }
+    .implication {
+      margin-top: 36px;
+      padding: 26px;
+      border-left: 6px solid var(--accent);
+      background: var(--sunken);
+    }
+    .implication strong { display: block; margin-bottom: 6px; }
+    .implication p { margin: 0; color: var(--fg-secondary); font-size: .86rem; }
+    .season-grid { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 28px; align-items: start; }
+    .event-list { display: grid; gap: 1px; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; background: var(--rule); }
+    .event {
+      padding: 22px;
+      background: var(--raised);
+    }
+    .event b { display: block; margin-bottom: 5px; font-size: .82rem; }
+    .event span { color: var(--fg-muted); font-size: .75rem; }
+    .peak { color: var(--accent-fg); }
+    .proposal-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(310px, .75fr);
+      gap: 50px;
+      align-items: center;
+      padding: clamp(30px, 5vw, 60px);
+      border: 1px solid var(--rule-strong);
+      border-radius: var(--radius);
+      background: var(--raised);
+    }
+    .proposal-summary h3 { margin-bottom: 12px; font-size: clamp(1.7rem, 3vw, 3rem); letter-spacing: -.04em; }
+    .proposal-summary p { color: var(--fg-secondary); }
+    .proposal-numbers { display: grid; gap: 18px; }
+    .proposal-numbers div { padding-top: 16px; border-top: 1px solid var(--rule); }
+    .proposal-numbers span { display: block; color: var(--fg-muted); font-size: .72rem; font-weight: 700; text-transform: uppercase; }
+    .proposal-numbers strong { display: block; margin-top: 4px; font-size: 1.25rem; }
+    .decision-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(330px, .9fr);
+      gap: 60px;
+      padding: clamp(34px, 6vw, 70px);
+      background: var(--accent);
+      color: var(--accent-ink);
+      border: 1px solid var(--accent-ink);
+      border-radius: var(--radius);
+    }
+    .decision-band h3 { max-width: 760px; margin-bottom: 14px; font-size: clamp(2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.05em; }
+    .decision-band p { max-width: 720px; }
+    .guardrails { display: grid; gap: 12px; align-content: center; }
+    .guardrail { display: grid; grid-template-columns: 32px 1fr; gap: 14px; padding: 15px 0; border-top: 1px solid rgba(61,51,0,.28); }
+    .guardrail:first-child { border-top: 0; }
+    .guardrail b { font-size: .82rem; }
+    .guardrail p { margin: 2px 0 0; font-size: .75rem; }
+    .methodology {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+    .methodology article { padding-top: 18px; border-top: 1px solid var(--rule-strong); }
+    .methodology h3 { margin-bottom: 8px; font-size: .9rem; }
+    .methodology p { color: var(--fg-muted); font-size: .75rem; }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px var(--gutter);
+      border-top: 1px solid var(--rule);
+      color: var(--fg-muted);
+      font-size: .72rem;
+    }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+    :focus-visible { outline: 3px solid var(--serie-1); outline-offset: 3px; }
+    @media (max-width: 980px) {
+      .print-button { display: none; }
+      .hero, .scenario-stage, .scenario-main, .chart-grid, .thesis, .allocation-grid, .evidence-layout, .season-grid, .proposal-summary, .decision-band { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .hero-panel { max-width: 680px; }
+      .evidence-summary { position: static; }
+      .scenario-main { gap: 24px; }
+      .demand-step:nth-child(2), .demand-step:nth-child(3) { margin-left: 0; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 28px, 1240px); }
+      .topbar { padding: 0 14px; }
+      .brand small { display: none; }
+      .nav { display: none; }
+      h1 { font-size: clamp(2.65rem, 15vw, 4.4rem); }
+      .hero h1 em { white-space: normal; }
+      .hero-panel { padding: 28px; }
+      .hero-total { font-size: clamp(2rem, 12vw, 3rem); }
+      .hero-unit, .hero-thesis { overflow-wrap: anywhere; }
+      .hero-panel { box-shadow: 7px 7px 0 var(--accent); }
+      .section { padding-block: 74px; }
+      .figure { padding: 18px; }
+      .figure-head { display: grid; gap: 10px; }
+      .signal { grid-template-columns: 1fr; gap: 12px; }
+      .stack-legend, .methodology { grid-template-columns: 1fr; }
+      .stacked { min-height: 94px; }
+      .stacked span { padding: 8px 5px; font-size: .61rem; writing-mode: vertical-rl; transform: rotate(180deg); }
+      .footer { display: grid; padding-inline: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media print {
+      .topbar, .print-button { display: none !important; }
+      .hero { min-height: 0; padding-block: 40px; }
+      .section { padding-block: 44px; break-inside: avoid; }
+      .reveal { opacity: 1; transform: none; }
+      .strategy { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .chart-scroll { overflow: visible; }
+      .chart-scroll svg { min-width: 0; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="Volver a documentos BetPlay">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>BetPlay <small>inversión 2027</small></span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#escenarios">Escenarios</a>
+      <a href="#estrategia">Estrategia</a>
+      <a href="#evidencia">Cuenta</a>
+    </nav>
+    <button class="print-button" type="button" onclick="window.print()">Guardar en PDF</button>
+  </header>
+
+  <main id="contenido">
+    <section class="hero wrap">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Plan de medios digital 2027</p>
+        <h1>Plan de inversión · 2027</h1>
+        <p>Google captura la intención. TikTok, video y formatos innovadores de programática aumentan las búsquedas que Google puede convertir.</p>
+      </div>
+      <aside class="hero-panel reveal" aria-label="Escenario recomendado">
+        <div class="scenario-label"><span>Propuesta 1</span><span class="recommended">Recomendada</span></div>
+        <p class="hero-total">$12.881,3 M</p>
+        <p class="hero-unit">COP millones | Exacto: $12.881.287.904 | Con optimización y sin IVA</p>
+        <p class="hero-thesis"><strong>44,3% Google</strong> para capturar intención y convertir. <strong>41,2% TikTok, YouTube y programática</strong> para ampliar la demanda disponible.</p>
+      </aside>
+    </section>
+
+    <section class="section wrap" id="escenarios">
+      <header class="section-head reveal">
+        <h2>Dos escenarios de inversión.</h2>
+        <p class="section-intro">Mismo presupuesto. La propuesta 1 da más peso a TikTok, YouTube y programática; la propuesta 2, a Google y Meta.</p>
+      </header>
+
+      <div class="scenario-stage reveal">
+        <article class="scenario-main">
+          <div>
+            <p class="kicker">Propuesta 1</p>
+            <h3>Capturar y crear demanda</h3>
+            <p class="big-number">$12.881,3</p>
+            <p class="scenario-note">millones COP, con optimización y sin IVA</p>
+          </div>
+          <div class="mix-list" aria-label="Principales participaciones de la propuesta 1">
+            <div class="mix-row"><span>Google</span><b>44,3%</b></div>
+            <div class="mix-row"><span>TikTok</span><b>16,0%</b></div>
+            <div class="mix-row"><span>Meta</span><b>11,0%</b></div>
+            <div class="mix-row"><span>YouTube</span><b>17,8%</b></div>
+            <div class="mix-row"><span>Programática</span><b>7,5%</b></div>
+          </div>
+        </article>
+        <article class="scenario-alt">
+          <p class="kicker">Propuesta 2</p>
+          <h3>Priorizar YouTube y Meta</h3>
+          <p class="big-number">$12.881,3</p>
+          <p class="scenario-note">millones COP, con optimización y sin IVA</p>
+          <p class="delta"><strong>Mismo presupuesto</strong>Piezas adicionales: $582,0 millones fuera del total</p>
+        </article>
+      </div>
+
+      <div class="chart-grid">
+        <figure class="figure reveal">
+          <div class="figure-head">
+            <h3>Inversión por medio</h3>
+            <div class="legend" aria-hidden="true"><span><i class="swatch"></i>Propuesta 1</span><span><i class="swatch p2"></i>Propuesta 2</span></div>
+          </div>
+          <div class="chart-scroll"><svg id="channel-chart" role="img" aria-labelledby="channel-title channel-desc" viewBox="0 0 940 570"><title id="channel-title">Comparación de inversión por medio</title><desc id="channel-desc">Barras agrupadas para los dos escenarios, con optimización y sin IVA.</desc></svg></div>
+          <figcaption>En P1, la programática se reserva para innovación: DOOH, rich media, real time ads y CTV. Las piezas adicionales de P2, $582,0 millones, quedan fuera del presupuesto.</figcaption>
+        </figure>
+        <figure class="figure reveal">
+          <div class="figure-head"><h3>Lectura ejecutiva</h3></div>
+          <table class="mini-table">
+            <thead><tr><th>Indicador</th><th>Resultado</th></tr></thead>
+            <tbody>
+              <tr><td>Propuesta 1 vs 2026</td><td class="positive">+31,3%</td></tr>
+              <tr><td>Propuesta 2 vs 2026</td><td class="positive">+31,3%</td></tr>
+              <tr><td>Brecha entre escenarios</td><td>$0</td></tr>
+              <tr><td>Optimización incluida</td><td>15,0%</td></tr>
+              <tr><td>Piezas adicionales</td><td>$582,0 M fuera</td></tr>
+            </tbody>
+          </table>
+          <figcaption>La comparación usa la misma base de 2026 con optimización y sin IVA.</figcaption>
+        </figure>
+      </div>
+
+      <div class="table-wrap reveal" aria-label="Detalle comparativo por medio">
+        <table class="comparison-table">
+          <thead><tr><th>Medio</th><th>Propuesta 1</th><th>Mix P1</th><th>Propuesta 2</th><th>Mix P2</th><th>P2 vs P1</th></tr></thead>
+          <tbody id="comparison-body"></tbody>
+          <tfoot><tr><td>Total</td><td>$12.881,3 M</td><td>100%</td><td>$12.881,3 M</td><td>100%</td><td>$0</td></tr></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="section strategy" id="estrategia">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Crear demanda y capturarla.</h2>
+          <p class="section-intro">Google convierte la intención. TikTok, video y formatos innovadores aumentan las búsquedas de marca y producto.</p>
+        </header>
+
+        <div class="thesis reveal">
+          <div class="thesis-copy">
+            <p>La marca convierte con eficiencia. Los términos genéricos amplios cuestan más. El plan crea demanda antes de capturarla en Google.</p>
+            <blockquote class="thesis-quote">TikTok abre la conversación. Video y programática construyen memoria. Google captura. BI valida el FTD.</blockquote>
+          </div>
+          <div class="demand-system" aria-label="Sistema de generación y captura de demanda">
+            <article class="demand-step"><span class="step-num">01</span><div><strong>Generar demanda</strong><p>TikTok, YouTube y formatos innovadores de programática.</p></div><span class="step-share">41,2%</span></article>
+            <article class="demand-step"><span class="step-num">02</span><div><strong>Asistir y amplificar</strong><p>Meta, patrocinios, Spotify, X y LinkedIn.</p></div><span class="step-share">14,5%</span></article>
+            <article class="demand-step"><span class="step-num">03</span><div><strong>Capturar y convertir</strong><p>Search y Performance Max con objetivos de depósito y FTD.</p></div><span class="step-share">44,3%</span></article>
+          </div>
+        </div>
+
+        <hr class="strategy-divider">
+
+        <div class="allocation-grid reveal">
+          <div>
+            <p class="kicker">Propuesta 1</p>
+            <h3>Cada peso tiene un trabajo.</h3>
+            <p>La captura conserva escala. La generación de demanda tiene presupuesto protegido.</p>
+            <div class="stacked" aria-label="Distribución funcional de la propuesta 1">
+              <span class="capture" style="width:44.3%">Capturar<br>44,3%</span>
+              <span class="create" style="width:41.2%">Generar<br>41,2%</span>
+              <span class="assist" style="width:12.5%">Asistir<br>12,5%</span>
+              <span class="amplify" style="width:2%">Amplificar<br>2%</span>
+            </div>
+            <div class="stack-legend">
+              <div style="color:#2a78d6"><i></i><span><strong>Captura</strong><br>Google Search y Performance Max.</span></div>
+              <div style="color:#1baf7a"><i></i><span><strong>Generación</strong><br>TikTok, YouTube y formatos de innovación programática: DOOH, rich media, real time ads y CTV.</span></div>
+              <div style="color:#eb6834"><i></i><span><strong>Asistencia</strong><br>Meta, Spotify, X y LinkedIn.</span></div>
+              <div style="color:#aaa9a4"><i></i><span><strong>Amplificación</strong><br>Patrocinios y activos deportivos.</span></div>
+            </div>
+          </div>
+          <aside class="google-split">
+            <p class="kicker">Dentro de Google</p>
+            <p class="big-number">$5.700,0 M</p>
+            <p class="scenario-note">44,3% de toda la propuesta recomendada</p>
+            <dl>
+              <div><dt>Casino + PMax Casino</dt><dd>39%</dd></div>
+              <div><dt>Deportes, Liga, apuestas y eSports</dt><dd>37%</dd></div>
+              <div><dt>Marca, PMax general y posicionamiento</dt><dd>24%</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="evidencia">
+      <header class="section-head reveal">
+        <h2>Qué muestra Google Ads.</h2>
+        <p class="section-intro">La marca convierte con eficiencia. Las búsquedas genéricas requieren control por CPA FTD.</p>
+      </header>
+
+      <div class="evidence-layout">
+        <aside class="evidence-summary reveal">
+          <h3>Google puede crecer con demanda de mejor calidad.</h3>
+          <p>La propuesta combina captura en Google con generación de demanda en TikTok, video y programática.</p>
+          <p class="source-note">Corte documentado: 27 de agosto al 22 de septiembre de 2026. Los hallazgos provienen de los reportes internos del repositorio y no de una nueva extracción directa de Google Ads en esta sesión.</p>
+        </aside>
+        <div>
+          <div class="evidence-list">
+            <article class="signal reveal">
+              <div class="signal-value">15,1×</div>
+              <div><h3>La búsqueda genérica cuesta más</h3><p>CPA por registro: $132.094 sin marca frente a $8.734 en marca.</p><a href="../google/optimizaciones-2026-09.html#keywords">Ver evidencia</a></div>
+            </article>
+            <article class="signal reveal">
+              <div class="signal-value">97,3%</div>
+              <div><h3>La marca concentra los registros</h3><p>70,5% de la inversión generó 97,3% de los registros.</p><a href="../google/optimizaciones-2026-09.html#keywords">Ver distribución</a></div>
+            </article>
+            <article class="signal reveal">
+              <div class="signal-value">2,2 → 16,4</div>
+              <div><h3>La entrega se recuperó</h3><p>La inversión diaria pasó de $2,2 a $16,4 millones tras ajustar medición y puja.</p><a href="../google/optimizaciones-2026-09.html#resumen">Ver evolución</a></div>
+            </article>
+            <article class="signal reveal">
+              <div class="signal-value">12% vs 7%</div>
+              <div><h3>Marca tenía espacio eficiente</h3><p>Perdía 12% de impresiones por presupuesto y 7% por puja.</p><a href="../google/optimizaciones-2026-09.html#presupuesto">Ver cuota</a></div>
+            </article>
+          </div>
+          <div class="implication reveal">
+            <strong>Implicación para 2027</strong>
+            <p>Proteger Search de marca, producto y cola larga; controlar los genéricos por CPA FTD; y medir si los pulsos de TikTok, YouTube y programática elevan búsquedas de marca, tráfico directo y conversiones totales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="metodologia">
+      <div class="methodology">
+        <article><h3>Fuente presupuestal</h3><p>Mensualizado Presupuesto Pauta Digital 2027 - Escenarios homologados.xlsx. Hojas “Proyeccion agencia recomendada” y “Propuesta de medios”.</p></article>
+        <article><h3>Fuente de cuenta</h3><p>Reporte de optimizaciones de Google Ads con datos cerrados al 22 de septiembre de 2026 y estrategia de crecimiento Casino incluida en este repositorio.</p></article>
+        <article><h3>Límite de lectura</h3><p>Las cifras históricas respaldan la dirección estratégica, pero no prueban por sí solas la incrementalidad del presupuesto 2027. La escala debe aprobarse por CPA FTD y lift medido.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>BetPlay Colombia | Resumen ejecutivo de inversión digital 2027</span>
+    <span>Documento interno | Juega con control, +18</span>
+  </footer>
+
+  <script>
+    const channelData = [
+      { name: "Google", p1: 5700000000, p2: 6831500000 },
+      { name: "TikTok", p1: 2061006065, p2: 1595715066 },
+      { name: "Meta", p1: 1416941668, p2: 1786700000 },
+      { name: "YouTube", p1: 2286398501, p2: 2207100000 },
+      { name: "Programática", p1: 966096593, p2: 0 },
+      { name: "Patrocinios", p1: 257625758, p2: 181757838 },
+      { name: "Spotify", p1: 128812879, p2: 210200000 },
+      { name: "X", p1: 38643864, p2: 36785000 },
+      { name: "LinkedIn", p1: 25762576, p2: 31530000 }
+    ];
+    const totals = { p1: 12881287904, p2: 12881287904 };
+    const monthlyData = {
+      labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+      p1: [842604163,1003856590,1075602129,892688175,1280539818,1508964570,1143837195,969264040,1031029852,1161955640,1096581062,874364670],
+      p2: [859632586,1008442237,1090950614,903515242,1277269713,1495274821,1139917303,969480591,1025936376,1152299946,1078953920,879614555]
+    };
+
+    const ns = "http://www.w3.org/2000/svg";
+    const svgEl = (name, attrs = {}, text = "") => {
+      const node = document.createElementNS(ns, name);
+      Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+      if (text) node.textContent = text;
+      return node;
+    };
+    const fmtB = value => `${(value / 1e9).toLocaleString("es-CO", { maximumFractionDigits: 2 })}`;
+    const fmtM = value => `$${(value / 1e6).toLocaleString("es-CO", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} M`;
+    const fmtPct = value => `${value.toLocaleString("es-CO", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+    const fmtSignedM = value => `${value >= 0 ? "+" : "-"}$${(Math.abs(value) / 1e6).toLocaleString("es-CO", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} M`;
+
+    function renderChannelChart() {
+      const svg = document.getElementById("channel-chart");
+      const width = 940, left = 132, right = 54, top = 36, rowH = 54, plotW = width - left - right, max = 7e9;
+      [0, 2e9, 4e9, 6e9].forEach(value => {
+        const x = left + (value / max) * plotW;
+        svg.append(svgEl("line", { x1: x, x2: x, y1: 24, y2: 520, stroke: "rgba(5,5,5,.12)", "stroke-width": 1 }));
+        svg.append(svgEl("text", { x, y: 548, fill: "#656560", "font-size": 12, "text-anchor": "middle", "font-family": "Poppins, sans-serif" }, value === 0 ? "0" : (value / 1e9).toLocaleString("es-CO", { minimumFractionDigits: 1, maximumFractionDigits: 1 })));
+      });
+      channelData.forEach((item, index) => {
+        const y = top + index * rowH;
+        svg.append(svgEl("text", { x: left - 14, y: y + 20, fill: "#050505", "font-size": 13, "font-weight": 700, "text-anchor": "end", "font-family": "Poppins, sans-serif" }, item.name));
+        const bars = [
+          { value: item.p1, y: y + 4, fill: "#2a78d6", labelY: y + 14 },
+          { value: item.p2, y: y + 22, fill: "#eb6834", labelY: y + 32 }
+        ];
+        bars.forEach(bar => {
+          if (bar.value === 0) {
+            svg.append(svgEl("text", { x: left + 7, y: bar.labelY, fill: "#656560", "font-size": 10.5, "text-anchor": "start", "font-family": "Poppins, sans-serif" }, "sin asignación"));
+            return;
+          }
+          const w = Math.max(2, (bar.value / max) * plotW);
+          const rect = svgEl("rect", { x: left, y: bar.y, width: w, height: 12, fill: bar.fill });
+          rect.append(svgEl("title", {}, `${item.name}: ${fmtM(bar.value)}`));
+          svg.append(rect);
+          svg.append(svgEl("text", { x: Math.min(left + w + 7, width - 6), y: bar.labelY, fill: "#4a4a47", "font-size": 10.5, "text-anchor": "start", "font-family": "Poppins, sans-serif" }, fmtB(bar.value)));
+        });
+      });
+    }
+
+    function renderComparisonTable() {
+      const body = document.getElementById("comparison-body");
+      channelData.forEach(item => {
+        const diff = item.p2 - item.p1;
+        const row = document.createElement("tr");
+        const p2Amount = item.p2 === 0 ? "Sin asignación" : fmtM(item.p2);
+        const p2Mix = item.p2 === 0 ? "0,0%" : fmtPct(item.p2 / totals.p2 * 100);
+        row.innerHTML = `<td>${item.name}</td><td>${fmtM(item.p1)}</td><td>${fmtPct(item.p1 / totals.p1 * 100)}</td><td>${p2Amount}</td><td>${p2Mix}</td><td class="${diff >= 0 ? "positive" : "negative"}">${fmtSignedM(diff)}</td>`;
+        body.append(row);
+      });
+    }
+
+    function renderMonthlyChart() {
+      const svg = document.getElementById("monthly-chart");
+      const width = 980, height = 420, left = 68, right = 28, top = 34, bottom = 58;
+      const plotW = width - left - right, plotH = height - top - bottom, min = 0.75e9, max = 1.65e9;
+      const x = index => left + (index / 11) * plotW;
+      const y = value => top + (1 - (value - min) / (max - min)) * plotH;
+      [4,5,9,10].forEach(index => svg.append(svgEl("rect", { x: x(index) - 25, y: top, width: 50, height: plotH, fill: "rgba(255,212,0,.17)" })));
+      [0.8e9,1e9,1.2e9,1.4e9,1.6e9].forEach(value => {
+        const yy = y(value);
+        svg.append(svgEl("line", { x1: left, x2: width - right, y1: yy, y2: yy, stroke: "rgba(5,5,5,.12)", "stroke-width": 1 }));
+        svg.append(svgEl("text", { x: left - 12, y: yy + 4, fill: "#656560", "font-size": 11, "text-anchor": "end", "font-family": "Poppins, sans-serif" }, fmtB(value)));
+      });
+      monthlyData.labels.forEach((label, index) => svg.append(svgEl("text", { x: x(index), y: height - 24, fill: "#656560", "font-size": 11, "text-anchor": "middle", "font-family": "Poppins, sans-serif" }, label)));
+      const series = [
+        { values: monthlyData.p1, color: "#2a78d6", name: "Propuesta 1" },
+        { values: monthlyData.p2, color: "#eb6834", name: "Propuesta 2" }
+      ];
+      series.forEach(item => {
+        const points = item.values.map((value, index) => `${x(index)},${y(value)}`).join(" ");
+        svg.append(svgEl("polyline", { points, fill: "none", stroke: item.color, "stroke-width": 4, "stroke-linecap": "round", "stroke-linejoin": "round" }));
+        item.values.forEach((value, index) => {
+          const circle = svgEl("circle", { cx: x(index), cy: y(value), r: 5, fill: item.color, stroke: "#fcfcfa", "stroke-width": 2 });
+          circle.append(svgEl("title", {}, `${item.name}, ${monthlyData.labels[index]}: ${fmtM(value)}`));
+          svg.append(circle);
+        });
+      });
+      svg.append(svgEl("text", { x: x(5), y: top - 10, fill: "#7d6800", "font-size": 11, "font-weight": 700, "text-anchor": "middle", "font-family": "Poppins, sans-serif" }, "Pico principal"));
+    }
+
+    renderChannelChart();
+    renderComparisonTable();
+    if (document.getElementById("monthly-chart")) renderMonthlyChart();
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      document.querySelectorAll(".reveal").forEach(node => node.classList.add("is-visible"));
+    } else {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .08, rootMargin: "0px 0px -40px" });
+      document.querySelectorAll(".reveal").forEach(node => observer.observe(node));
+    }
+  </script>
+</body>
+</html>
