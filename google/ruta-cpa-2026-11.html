@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Por qué subió el costo por registro en Google en noviembre y la ruta de optimización que ya está en marcha: competidores fuera, objetivos de retorno y Marca dividida." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>BetPlay | Ruta para bajar el costo por registro · Noviembre 2026</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/adcom.css">
+  <script defer src="../assets/js/adcom.js"></script>
+  <style>
+    th.orden{padding:0 18px 12px 0}
+    thead th.orden + th.orden{padding-inline:18px 0}
+    th.orden button{
+      font:inherit; color:inherit; background:none; border:0; padding:0;
+      display:inline-flex; align-items:center; gap:6px; cursor:pointer;
+      letter-spacing:inherit}
+    thead th + th.orden button{flex-direction:row-reverse}
+    th.orden button:hover{color:var(--ink)}
+    th.orden .ico{opacity:0; transition:opacity .15s var(--ease)}
+    th.orden button:hover .ico{opacity:.45}
+    th.orden[aria-sort] button{color:var(--ink)}
+    th.orden[aria-sort] .ico{opacity:1}
+    th.orden[aria-sort="ascending"] .ico{transform:rotate(180deg)}
+    @media (prefers-reduced-motion:reduce){ th.orden .ico{transition:none} }
+
+    table.prosa thead th + th, table.prosa td{text-align:left}
+    table.prosa td{padding-inline:18px 0; max-width:52ch}
+    .pieza + .pieza, .pieza + .panel, .pieza + .duo, .duo + .pieza{margin-top:var(--s-6)}
+    .pieza > h3{font-size:1.3rem; margin:0 0 8px}
+    .pieza > .note{margin:0 0 16px; max-width:var(--measure)}
+    .slab{margin-block:var(--s-6)}
+    /* En el telefono .app-main es flex en columna y .wrap trae margin auto:
+       sin ancho declarado, main toma el ancho minimo de su tabla mas ancha y
+       el documento entero se desplaza en horizontal (660 px a 390). Es un
+       arreglo del sistema, no de este documento: candidato a adcom.css. */
+    .app-content.wrap{width:100%}
+
+    .grafico > h3{font-size:1.3rem; margin:0 0 8px}
+    .grafico > .note{margin:0 0 18px; max-width:var(--measure)}
+    .grafico .legend i{border-radius:2px}
+    .apiladas{display:grid; gap:10px}
+    .apilada-fila{display:grid; grid-template-columns:minmax(84px,128px) minmax(0,1fr) 64px;
+      gap:12px; align-items:center; font-size:.8rem}
+    .apilada-nombre{color:var(--ink-secondary); font-weight:600}
+    .apilada-total{text-align:right; font-weight:700; font-variant-numeric:tabular-nums}
+    .apilada-barra{display:flex; gap:2px; height:28px}
+    .apilada-barra i{display:flex; align-items:center; justify-content:center; height:100%;
+      min-width:0; overflow:hidden; font-style:normal; font-size:.74rem; font-weight:700;
+      color:var(--serie-fg); font-variant-numeric:tabular-nums; border-radius:2px}
+    .apilada-barra i.resto{background:var(--sunken); color:var(--ink-muted)}
+    .apilada-fila.is-marca .apilada-nombre{color:var(--ink)}
+    .apilada-corte{display:flex; align-items:center; gap:10px; margin-block:6px;
+      font-size:.76rem; font-weight:600; color:var(--ink-muted)}
+    .apilada-corte::before,.apilada-corte::after{content:""; flex:1;
+      border-top:1px dashed var(--rule-strong)}
+    .cambios{display:grid; gap:12px}
+    .cambio-fila{display:grid; grid-template-columns:minmax(120px,180px) minmax(0,1fr) minmax(0,1fr) 72px;
+      align-items:center; font-size:.85rem}
+    .cambio-nombre{font-weight:600; color:var(--ink-secondary); padding-right:12px}
+    .cambio-lado{display:flex; height:20px}
+    .cambio-lado.antes{justify-content:flex-end; border-right:1px solid var(--rule-strong)}
+    .cambio-lado i{display:block; height:100%; border-radius:2px}
+    .cambio-valor{text-align:right; font-weight:800; font-size:1.05rem;
+      font-variant-numeric:tabular-nums}
+    .cambio-eje{font-size:.74rem; font-weight:600; color:var(--ink-muted)}
+    .cambio-eje span:nth-child(2){text-align:right; padding-right:10px}
+    .cambio-eje span:nth-child(3){padding-left:10px}
+    .cambio-eje span:last-child{text-align:right}
+    .cambio-fila.is-total{padding-top:12px; border-top:1px solid var(--rule-strong)}
+    .cambio-fila.is-total .cambio-nombre{color:var(--ink)}
+    .comparar{display:grid; gap:var(--s-5) var(--s-6);
+      grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}
+    .comparar h4{font-size:.95rem; font-weight:600; margin:0 0 12px}
+    .comparar .share-row{grid-template-columns:minmax(88px,112px) minmax(0,1fr) 48px}
+    .datos{margin-top:14px; font-size:.85rem}
+    .datos summary{cursor:pointer; font-weight:600; color:var(--ink-secondary)}
+    .datos .table-scroll{margin-top:12px}
+    .crono{display:grid; gap:12px; min-width:680px}
+    .crono-fila{display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; align-items:center}
+    .crono-nombre b{display:block; font-size:.92rem; line-height:1.3}
+    .crono-nombre span{font-size:.76rem; color:var(--ink-muted)}
+    .crono-semanas{display:grid; font-size:.74rem; font-weight:600; color:var(--ink-muted)}
+    .crono-pista{position:relative; height:24px; background:var(--sunken); border-radius:2px}
+    .crono-pista i{position:absolute; top:0; bottom:0; background:var(--ink); border-radius:2px}
+    .crono-pista i.is-accent{background:var(--accent-deep)}
+    .crono-pista u{position:absolute; top:0; bottom:0; width:2px; background:var(--paper)}
+    @media (max-width:560px){
+      .apilada-fila{grid-template-columns:70px minmax(0,1fr) 50px; gap:8px}
+      .apilada-barra i{font-size:.68rem}
+      .cambio-fila{grid-template-columns:96px minmax(0,1fr) minmax(0,1fr) 56px; font-size:.78rem}
+      /* El cronograma no hace scroll en el telefono: nombre arriba, pista abajo
+         a todo el ancho. Cinco semanas caben en 350 px; 240 de nombre no. */
+      .crono{min-width:0}
+      .crono-fila{grid-template-columns:minmax(0,1fr); gap:6px}
+      .crono-fila:first-child > span:first-child{display:none}
+    }
+  </style>
+</head>
+<body class="con-shell">
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <nav class="app-sidebar">
+    <div class="app-sidebar-top">
+      <a class="app-sidebar-brand" href="../index.html"><i></i>Adcom</a>
+      <div class="app-sidebar-client">
+        <span class="app-sidebar-client-label">Cliente</span>
+        <strong class="app-sidebar-client-name">BetPlay Colombia</strong>
+        <span class="app-sidebar-client-period">22 oct - 17 nov 2026</span>
+      </div>
+    </div>
+    <div class="app-sidebar-nav">
+      <span class="app-sidebar-nav-title">Contenido</span>
+      <a href="#resumen"><b></b>En tres ideas<small>01</small></a>
+      <a href="#evolucion"><b></b>Qué pasó<small>02</small></a>
+      <a href="#marca"><b></b>Dónde está el clic<small>03</small></a>
+      <a href="#objetivo"><b></b>Objetivos de retorno<small>04</small></a>
+      <a href="#ruta"><b></b>La ruta<small>05</small></a>
+    </div>
+    <div class="app-sidebar-foot">Uso interno, no compartir sin autorización</div>
+  </nav>
+
+  <div class="app-main">
+    <div class="app-topbar">
+      <span class="app-topbar-crumb">Google Ads: ruta del costo por registro</span>
+      <span class="app-topbar-section">En tres ideas</span>
+    </div>
+
+    <main class="app-content wrap" id="contenido">
+      <header class="opening">
+        <h1>Ruta para bajar el costo por registro · Noviembre 2026</h1>
+        <p class="lede">El costo por registro subió en la segunda mitad de noviembre. Tiene tres causas distintas, y cada una tiene su respuesta: tres ajustes ya hechos y cuatro pasos que siguen.</p>
+        <div class="opening-meta">
+          <div><b>22 de octubre - 17 de noviembre de 2026</b><span>Periodo</span></div>
+          <div><b>Google Analytics 4, registro exitoso</b><span>Referencia principal</span></div>
+          <div><b>Búsqueda y Performance Max, sin YouTube</b><span>Escenario de Google</span></div>
+        </div>
+      </header>
+
+      <hr class="divider">
+
+      <section class="slab" id="resumen">
+      <div class="wrap">
+      <h2>Tres causas, tres respuestas</h2>
+      <p class="lede">El costo por registro de Analytics pasó de unos 37.500 a unos 79.000 entre fines de octubre y el 17 de noviembre. No viene de una sola cosa.</p>
+      <div class="calls">
+        <div class="call">
+          <h3>Subir la inversión rindió menos que ella</h3>
+          <p>Al subir la inversión los registros de Google subieron menos. Casi todo el gasto va a quien ya busca «BetPlay», y esa demanda tiene techo.</p>
+          <span class="verdict">Más inversión en marca no compra más registros</span>
+        </div>
+        <div class="call">
+          <h3>Desde el 12 de noviembre cambió la etiqueta</h3>
+          <p>Las visitas de marca empezaron a llegar con otra etiqueta y sin nombre de campaña, y Google Ads recibe menos conversiones para pujar.</p>
+          <span class="verdict">Se corrige con la etiqueta estándar de pago</span>
+        </div>
+        <div class="call">
+          <h3>El sitio completo bajó el 15, 16 y 17</h3>
+          <p>Los registros de todos los canales cayeron entre 22% y 27% contra la semana anterior, con las mismas sesiones. El 15 y el 16 fueron puente festivo.</p>
+          <span class="verdict">Google conserva su parte: 12% del total</span>
+        </div>
+      </div>
+      <p class="slab-foot">La ruta de respuesta está en <a href="#ruta">La ruta</a>.</p>
+      </div>
+    </section>
+
+      <section class="grupo" id="evolucion">
+      <div class="head">
+        <h2>El costo por registro se movió en tres tramos</h2>
+        <p class="lede">Hasta el 11 de noviembre el costo subió despacio al subir la inversión. Desde el 12 el cambio de etiqueta y la caída del sitio empujaron las dos lecturas.</p>
+      </div>
+
+      <div class="pieza">
+        <figure class="figure grafico">
+        <h3>Costo por registro, por día</h3>
+        <div class="legend"><span><i style="background:var(--ink)"></i>Google Ads</span><span><i style="background:var(--serie-1)"></i>Analytics</span></div>
+        <div class="table-scroll" style="width:0;min-width:100%">
+          <svg viewBox="0 0 1040 300" width="1040" role="img"
+               aria-labelledby="cpa-t" style="width:100%;min-width:640px;height:auto">
+            <title id="cpa-t">Promedio de tres días, del 24 de octubre al 17 de noviembre. Las dos lecturas miden lo mismo: costo dividido por los registros que cada una cuenta.</title>
+            <style>.linea-dia{fill:transparent} .linea-dia:hover{fill:var(--sunken)}</style>
+            <line x1="46" x2="870" y1="207.2" y2="207.2" stroke="var(--rule)"/><text x="38" y="211.2" text-anchor="end" font-size="12" fill="var(--ink-muted)">20000</text><line x1="46" x2="870" y1="148.4" y2="148.4" stroke="var(--rule)"/><text x="38" y="152.4" text-anchor="end" font-size="12" fill="var(--ink-muted)">40000</text><line x1="46" x2="870" y1="89.5" y2="89.5" stroke="var(--rule)"/><text x="38" y="93.5" text-anchor="end" font-size="12" fill="var(--ink-muted)">60000</text><line x1="46" x2="870" y1="30.7" y2="30.7" stroke="var(--rule)"/><text x="38" y="34.7" text-anchor="end" font-size="12" fill="var(--ink-muted)">80000</text><text x="0" y="12" font-size="12" font-weight="600" fill="var(--ink-muted)">Pesos por registro</text><line x1="46" x2="870" y1="192.5" y2="192.5" stroke="var(--rule-strong)" stroke-dasharray="4 4"/><rect class="linea-dia" x="28.8" y="16" width="34.3" height="250"><title>24 oct · Google Ads: 14.001 · Analytics: 39.585</title></rect><rect class="linea-dia" x="63.2" y="16" width="34.3" height="250"><title>25 oct · Google Ads: 14.849 · Analytics: 41.876</title></rect><rect class="linea-dia" x="97.5" y="16" width="34.3" height="250"><title>26 oct · Google Ads: 12.822 · Analytics: 42.729</title></rect><rect class="linea-dia" x="131.8" y="16" width="34.3" height="250"><title>27 oct · Google Ads: 11.186 · Analytics: 40.963</title></rect><rect class="linea-dia" x="166.2" y="16" width="34.3" height="250"><title>28 oct · Google Ads: 9.975 · Analytics: 36.183</title></rect><rect class="linea-dia" x="200.5" y="16" width="34.3" height="250"><title>29 oct · Google Ads: 11.326 · Analytics: 36.590</title></rect><rect class="linea-dia" x="234.8" y="16" width="34.3" height="250"><title>30 oct · Google Ads: 10.959 · Analytics: 34.464</title></rect><rect class="linea-dia" x="269.2" y="16" width="34.3" height="250"><title>31 oct · Google Ads: 11.299 · Analytics: 33.827</title></rect><rect class="linea-dia" x="303.5" y="16" width="34.3" height="250"><title>1 nov · Google Ads: 13.454 · Analytics: 39.517</title></rect><rect class="linea-dia" x="337.8" y="16" width="34.3" height="250"><title>2 nov · Google Ads: 19.690 · Analytics: 54.390</title></rect><rect class="linea-dia" x="372.2" y="16" width="34.3" height="250"><title>3 nov · Google Ads: 19.233 · Analytics: 60.773</title></rect><rect class="linea-dia" x="406.5" y="16" width="34.3" height="250"><title>4 nov · Google Ads: 15.460 · Analytics: 47.540</title></rect><rect class="linea-dia" x="440.8" y="16" width="34.3" height="250"><title>5 nov · Google Ads: 12.004 · Analytics: 34.870</title></rect><rect class="linea-dia" x="475.2" y="16" width="34.3" height="250"><title>6 nov · Google Ads: 12.763 · Analytics: 34.600</title></rect><rect class="linea-dia" x="509.5" y="16" width="34.3" height="250"><title>7 nov · Google Ads: 14.837 · Analytics: 35.820</title></rect><rect class="linea-dia" x="543.8" y="16" width="34.3" height="250"><title>8 nov · Google Ads: 21.319 · Analytics: 49.329</title></rect><rect class="linea-dia" x="578.2" y="16" width="34.3" height="250"><title>9 nov · Google Ads: 21.260 · Analytics: 52.354</title></rect><rect class="linea-dia" x="612.5" y="16" width="34.3" height="250"><title>10 nov · Google Ads: 20.550 · Analytics: 57.002</title></rect><rect class="linea-dia" x="646.8" y="16" width="34.3" height="250"><title>11 nov · Google Ads: 17.042 · Analytics: 46.130</title></rect><rect class="linea-dia" x="681.2" y="16" width="34.3" height="250"><title>12 nov · Google Ads: 19.962 · Analytics: 47.458</title></rect><rect class="linea-dia" x="715.5" y="16" width="34.3" height="250"><title>13 nov · Google Ads: 23.285 · Analytics: 47.933</title></rect><rect class="linea-dia" x="749.8" y="16" width="34.3" height="250"><title>14 nov · Google Ads: 30.006 · Analytics: 50.695</title></rect><rect class="linea-dia" x="784.2" y="16" width="34.3" height="250"><title>15 nov · Google Ads: 43.484 · Analytics: 57.572</title></rect><rect class="linea-dia" x="818.5" y="16" width="34.3" height="250"><title>16 nov · Google Ads: 62.009 · Analytics: 69.676</title></rect><rect class="linea-dia" x="852.8" y="16" width="34.3" height="250"><title>17 nov · Google Ads: 58.113 · Analytics: 79.150</title></rect><polyline points="46.0,224.8 80.3,222.3 114.7,228.3 149.0,233.1 183.3,236.7 217.7,232.7 252.0,233.8 286.3,232.8 320.7,226.4 355.0,208.1 389.3,209.4 423.7,220.5 458.0,230.7 492.3,228.5 526.7,222.4 561.0,203.3 595.3,203.5 629.7,205.6 664.0,215.9 698.3,207.3 732.7,197.5 767.0,177.7 801.3,138.1 835.7,83.6 870.0,95.1" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" pointer-events="none"/><polyline points="46.0,149.6 80.3,142.8 114.7,140.3 149.0,145.5 183.3,159.6 217.7,158.4 252.0,164.6 286.3,166.5 320.7,149.8 355.0,106.0 389.3,87.3 423.7,126.2 458.0,163.4 492.3,164.2 526.7,160.6 561.0,120.9 595.3,112.0 629.7,98.3 664.0,130.3 698.3,126.4 732.7,125.0 767.0,116.9 801.3,96.7 835.7,61.1 870.0,33.2" fill="none" stroke="var(--serie-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" pointer-events="none"/><circle cx="870.0" cy="33.2" r="4" fill="var(--serie-1)" stroke="var(--paper)" stroke-width="2"/><text x="882.0" y="37.2" font-size="13" font-weight="700" fill="var(--ink)">Analytics</text><circle cx="870.0" cy="95.1" r="4" fill="var(--ink)" stroke="var(--paper)" stroke-width="2"/><text x="882.0" y="99.1" font-size="13" font-weight="700" fill="var(--ink)">Google Ads</text><text x="46.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">24 oct</text><text x="149.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">27 oct</text><text x="252.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">30 oct</text><text x="355.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">2 nov</text><text x="458.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">5 nov</text><text x="561.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">8 nov</text><text x="664.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">11 nov</text><text x="767.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">14 nov</text><text x="870.0" y="290" text-anchor="middle" font-size="12" fill="var(--ink-muted)">17 nov</text>
+          </svg>
+        </div>
+        <figcaption>La línea punteada es el objetivo de 25.000, que se cumplió con otro reparto de canales, antes de octubre. Sin YouTube ni eSports. Con la inversión actual el nivel de Analytics se movió entre 34.000 y 57.000 hasta el 11 de noviembre.</figcaption>
+        <details class="datos">
+          <summary>Ver los datos</summary>
+          
+      
+      <div class="table-scroll">
+        <table>
+          
+          <thead><tr><th scope="col">Dia</th><th scope="col">Google Ads</th><th scope="col">Analytics</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">24 oct</th><td>14.001</td><td>39.585</td></tr><tr><th scope="row">25 oct</th><td>14.849</td><td>41.876</td></tr><tr><th scope="row">26 oct</th><td>12.822</td><td>42.729</td></tr><tr><th scope="row">27 oct</th><td>11.186</td><td>40.963</td></tr><tr><th scope="row">28 oct</th><td>9.975</td><td>36.183</td></tr><tr><th scope="row">29 oct</th><td>11.326</td><td>36.590</td></tr><tr><th scope="row">30 oct</th><td>10.959</td><td>34.464</td></tr><tr><th scope="row">31 oct</th><td>11.299</td><td>33.827</td></tr><tr><th scope="row">1 nov</th><td>13.454</td><td>39.517</td></tr><tr><th scope="row">2 nov</th><td>19.690</td><td>54.390</td></tr><tr><th scope="row">3 nov</th><td>19.233</td><td>60.773</td></tr><tr><th scope="row">4 nov</th><td>15.460</td><td>47.540</td></tr><tr><th scope="row">5 nov</th><td>12.004</td><td>34.870</td></tr><tr><th scope="row">6 nov</th><td>12.763</td><td>34.600</td></tr><tr><th scope="row">7 nov</th><td>14.837</td><td>35.820</td></tr><tr><th scope="row">8 nov</th><td>21.319</td><td>49.329</td></tr><tr><th scope="row">9 nov</th><td>21.260</td><td>52.354</td></tr><tr><th scope="row">10 nov</th><td>20.550</td><td>57.002</td></tr><tr><th scope="row">11 nov</th><td>17.042</td><td>46.130</td></tr><tr><th scope="row">12 nov</th><td>19.962</td><td>47.458</td></tr><tr><th scope="row">13 nov</th><td>23.285</td><td>47.933</td></tr><tr><th scope="row">14 nov</th><td>30.006</td><td>50.695</td></tr><tr><th scope="row">15 nov</th><td>43.484</td><td>57.572</td></tr><tr><th scope="row">16 nov</th><td>62.009</td><td>69.676</td></tr><tr><th scope="row">17 nov</th><td>58.113</td><td>79.150</td></tr>
+          </tbody>
+        </table>
+      </div>
+        </details>
+      </figure>
+      </div>
+
+      <div class="pieza">
+        <h3>Registros diarios de Google, por tramo</h3><figure class="figure grow">
+        <div class="bars">
+          <div class="bar-row">
+              <div class="bar-head">
+                <span class="name">22 - 31 oct</span>
+                <span class="val">199</span>
+              </div>
+              <div class="bar-track"><i style="width:66.3%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">1 - 5 nov</span>
+                <span class="val">174</span>
+              </div>
+              <div class="bar-track"><i style="width:58.0%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">6 - 11 nov</span>
+                <span class="val">188</span>
+              </div>
+              <div class="bar-track"><i style="width:62.7%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">12 - 14 nov</span>
+                <span class="val">268</span>
+              </div>
+              <div class="bar-track"><i class="is-best" style="width:89.3%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">15 - 17 nov</span>
+                <span class="val">138</span>
+              </div>
+              <div class="bar-track"><i style="width:46.0%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div>
+        </div>
+        <figcaption>Registros por día que Analytics asigna a las sesiones de Google. El 12 al 14 fue el tramo con más inversión y con el pico de registros; el 15 al 17 coincide con la caída de todo el sitio: 941, 1.037 y 1.247 registros, contra 1.298, 1.338 y 1.643 la semana anterior. El 15 y el 16 fueron puente festivo.</figcaption>
+      </figure>
+      </div>
+      <div class="panel">
+        <h3>Qué quiere decir.</h3>
+        <p>Antes del 12 de noviembre cada peso adicional rendía menos que el anterior. Después se sumaron el cambio de etiqueta y un sitio con menos registros en todos los canales. Por eso el 17 de noviembre es el punto más alto, y no se debe leer como el nivel estable.</p>
+      </div>
+    </section>
+
+      <section class="grupo" id="marca">
+      <div class="head">
+        <h2>Casi todo el clic pagado es de marca, y dos campañas pujan por él</h2>
+        <p class="lede">Marca y Performance Max compiten por las mismas búsquedas de «BetPlay». Marca paga menos de la mitad por clic.</p>
+      </div>
+
+      <div class="pieza">
+        <h3>Costo por clic de una búsqueda de marca</h3><figure class="figure grow">
+        <div class="bars">
+          <div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Marca</span>
+                <span class="val">120 pesos</span>
+              </div>
+              <div class="bar-track"><i class="is-best" style="width:40.0%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Performance Max</span>
+                <span class="val">270 pesos</span>
+              </div>
+              <div class="bar-track"><i class="is-over" style="width:90.0%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div>
+        </div>
+        <figcaption>Clics de búsqueda de marca del 8 al 17 de noviembre. 87% de los clics de Performance Max son de marca. Marca capta 79% de las impresiones posibles y pierde el resto sobre todo por ranking, no por presupuesto.</figcaption>
+      </figure>
+      </div>
+
+      <div class="pieza">
+        <figure class="figure grafico">
+        <h3>Cuánto de la búsqueda captura cada campaña</h3>
+        <div class="legend"><span><i style="background:var(--serie-1)"></i>Captada</span><span><i style="background:var(--serie-2)"></i>Perdida por presupuesto</span><span><i style="background:var(--serie-3)"></i>Perdida por ranking</span></div>
+        <div class="apiladas"><div class="apilada-fila is-marca">
+            <span class="apilada-nombre">Marca</span>
+            <div class="apilada-barra"><i style="width:79.00%;background:var(--serie-1)" title="Captada: 79%">79%</i><i style="width:9.00%;background:var(--serie-2)" title="Perdida por presupuesto: 9%">9%</i><i style="width:12.00%;background:var(--serie-3)" title="Perdida por ranking: 12%">12%</i></div>
+            <b class="apilada-total">100</b>
+          </div><div class="apilada-fila">
+            <span class="apilada-nombre">Shadow</span>
+            <div class="apilada-barra"><i style="width:54.00%;background:var(--serie-1)" title="Captada: 54%">54%</i><i style="width:31.00%;background:var(--serie-2)" title="Perdida por presupuesto: 31%">31%</i><i style="width:15.00%;background:var(--serie-3)" title="Perdida por ranking: 15%">15%</i></div>
+            <b class="apilada-total">100</b>
+          </div><div class="apilada-fila">
+            <span class="apilada-nombre">Performance Max</span>
+            <div class="apilada-barra"><i style="width:33.00%;background:var(--serie-1)" title="Captada: 33%">33%</i><i style="width:23.00%;background:var(--serie-2)" title="Perdida por presupuesto: 23%">23%</i><i style="width:44.00%;background:var(--serie-3)" title="Perdida por ranking: 44%">44%</i></div>
+            <b class="apilada-total">100</b>
+          </div><div class="apilada-fila">
+            <span class="apilada-nombre">Slots</span>
+            <div class="apilada-barra"><i style="width:28.00%;background:var(--serie-1)" title="Captada: 28%">28%</i><i style="width:72.00%;background:var(--serie-3)" title="Perdida por ranking: 72%">72%</i></div>
+            <b class="apilada-total">100</b>
+          </div><div class="apilada-fila">
+            <span class="apilada-nombre">Casino</span>
+            <div class="apilada-barra"><i style="width:22.00%;background:var(--serie-1)" title="Captada: 22%">22%</i><i style="width:48.00%;background:var(--serie-2)" title="Perdida por presupuesto: 48%">48%</i><i style="width:30.00%;background:var(--serie-3)" title="Perdida por ranking: 30%">30%</i></div>
+            <b class="apilada-total">100</b>
+          </div><div class="apilada-fila">
+            <span class="apilada-nombre">Apuestas</span>
+            <div class="apilada-barra"><i style="width:9.00%;background:var(--serie-1)" title="Captada: 9%">9%</i><i style="width:72.00%;background:var(--serie-2)" title="Perdida por presupuesto: 72%">72%</i><i style="width:19.00%;background:var(--serie-3)" title="Perdida por ranking: 19%">19%</i></div>
+            <b class="apilada-total">100</b>
+          </div><div class="apilada-fila">
+            <span class="apilada-nombre">Liga</span>
+            <div class="apilada-barra"><i style="width:10.00%;background:var(--serie-1)" title="Captada: 10%">10%</i><i style="width:88.00%;background:var(--serie-2)" title="Perdida por presupuesto: 88%">88%</i><i style="width:2.00%;background:var(--serie-3)" title="Perdida por ranking: 2%"></i></div>
+            <b class="apilada-total">100</b>
+          </div></div>
+        <figcaption>Porcentaje de las impresiones que la campaña podía tener, del 8 al 17 de noviembre. Google entrega estas tres medidas por separado y en Casino, Apuestas y Liga no suman 100, así que se ajustaron en proporción. La demanda sin atender está en Apuestas, Liga y Casino, donde el costo por registro es más alto. En marca ya capturamos casi todo.</figcaption>
+        <details class="datos">
+          <summary>Ver los datos</summary>
+          
+      
+      <div class="table-scroll">
+        <table>
+          
+          <thead><tr><th scope="col">Campaña</th><th scope="col">Captada</th><th scope="col">Perdida por presupuesto</th><th scope="col">Perdida por ranking</th><th scope="col">Total</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Marca</th><td>79%</td><td>9%</td><td>12%</td><td>100</td></tr><tr><th scope="row">Shadow</th><td>54%</td><td>31%</td><td>15%</td><td>100</td></tr><tr><th scope="row">Performance Max</th><td>33%</td><td>23%</td><td>44%</td><td>100</td></tr><tr><th scope="row">Slots</th><td>28%</td><td>0%</td><td>72%</td><td>100</td></tr><tr><th scope="row">Casino</th><td>22%</td><td>48%</td><td>30%</td><td>100</td></tr><tr><th scope="row">Apuestas</th><td>9%</td><td>72%</td><td>19%</td><td>100</td></tr><tr><th scope="row">Liga</th><td>10%</td><td>88%</td><td>2%</td><td>100</td></tr>
+          </tbody>
+        </table>
+      </div>
+        </details>
+      </figure>
+      </div>
+
+      <div class="pieza">
+        <h3>Retorno de Google Ads por tipo de búsqueda de Marca</h3><figure class="figure grow">
+        <div class="bars">
+          <div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Nombre solo (90% del gasto)</span>
+                <span class="val">12,7</span>
+              </div>
+              <div class="bar-track"><i class="is-best" style="width:79.4%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Producto: apuestas, casino</span>
+                <span class="val">15,0</span>
+              </div>
+              <div class="bar-track"><i style="width:93.8%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Registro, bono, referido</span>
+                <span class="val">7,9</span>
+              </div>
+              <div class="bar-track"><i style="width:49.4%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Soporte: iniciar sesión, descargar</span>
+                <span class="val">4,9</span>
+              </div>
+              <div class="bar-track"><i class="is-over" style="width:30.6%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Otros</span>
+                <span class="val">10,5</span>
+              </div>
+              <div class="bar-track"><i style="width:65.6%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div>
+        </div>
+        <figcaption>Retorno es el valor de conversión sobre el costo (el registro vale 200.000 fijos), del 22 de octubre al 18 de noviembre. Los términos de soporte son usuarios que ya tienen cuenta; los de producto son los que mejor rinden y son pocos. Por eso se separan en su propia campaña.</figcaption>
+      </figure>
+      </div>
+      
+    </section>
+
+      <section class="grupo" id="objetivo">
+      <div class="head">
+        <h2>El objetivo de Marca era más alto que lo que rinde</h2>
+        <p class="lede">Como el registro vale lo mismo, el objetivo de retorno equivale a pedir un costo: 200.000 dividido por el retorno. Un objetivo por encima de lo que la campaña logra limita la puja y deja de ganar subastas.</p>
+      </div>
+
+      <div class="pieza">
+        <h3>Marca: objetivo y retorno real</h3><figure class="figure grow">
+        <div class="bars">
+          <div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Objetivo anterior</span>
+                <span class="val">20</span>
+              </div>
+              <div class="bar-track"><i class="is-over" style="width:90.9%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Objetivo nuevo, 19 nov</span>
+                <span class="val">16</span>
+              </div>
+              <div class="bar-track"><i class="is-best" style="width:72.7%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Retorno real, 22 oct - 11 nov</span>
+                <span class="val">14,1</span>
+              </div>
+              <div class="bar-track"><i style="width:64.1%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div><div class="bar-row">
+              <div class="bar-head">
+                <span class="name">Retorno real, 12 - 18 nov</span>
+                <span class="val">8,2</span>
+              </div>
+              <div class="bar-track"><i style="width:37.3%"></i></div>
+              <div class="bar-foot"><span></span></div>
+            </div>
+        </div>
+        <figcaption>Con retorno 20 se pedía un costo de 10.000 en Google Ads, que Marca no logró en las tres semanas anteriores. Gastaba menos de lo que podía y perdía impresiones por ranking. Se baja a 16 hoy (20% menos, el máximo recomendado por cambio) y a 14 hacia el 24 de noviembre, que equivale a un costo de unos 14.300 en Google Ads y 36.000 a 46.000 en Analytics.</figcaption>
+      </figure>
+      </div>
+      <div class="panel">
+        <h3>Qué se deja igual.</h3>
+        <p>Performance Max queda sin objetivo mientras Google Ads recupera las conversiones que dejó de recibir el 12 de noviembre: un objetivo calculado con datos incompletos la haría gastar menos de lo debido. Casino, Apuestas y Liga conservan el suyo, que ya las restringe. Slots baja de 10,5 a 8 porque su objetivo estaba por encima de lo que rinde.</p>
+      </div>
+    </section>
+
+      <section class="grupo" id="ruta">
+      <div class="head">
+        <h2>Tres ajustes hechos y cuatro pasos que siguen</h2>
+        <p class="lede">Los cambios en cuentas se simularon antes de aplicarse y quedan con respaldo para revertirse. Cada paso se lee con tres días de madurez.</p>
+      </div>
+
+      <div class="pieza">
+        <figure class="figure grafico">
+        <h3>Qué, quién y cuándo</h3>
+        <div class="legend"><span><i style="background:var(--accent-deep)"></i>Hecho el 19 de noviembre</span><span><i style="background:var(--ink)"></i>Sigue</span></div>
+        <div class="table-scroll">
+          <div class="crono">
+            <div class="crono-fila"><span></span><div class="crono-semanas" style="grid-template-columns:repeat(4,minmax(0,1fr))"><span>16 nov</span><span>23 nov</span><span>30 nov</span><span>7 dic</span></div></div>
+            <div class="crono-fila">
+            <div class="crono-nombre"><b>1. Competidores fuera de la cuenta</b><span>Adcom, hecho</span></div>
+            <div class="crono-pista" title="Competidores fuera de la cuenta: 16 nov a 16 nov">
+              <i class="is-accent" style="left:0.000%;width:25.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div><div class="crono-fila">
+            <div class="crono-nombre"><b>2. Objetivo de retorno de Marca y Slots</b><span>Adcom, hecho</span></div>
+            <div class="crono-pista" title="Objetivo de retorno de Marca y Slots: 16 nov a 16 nov">
+              <i class="is-accent" style="left:0.000%;width:25.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div><div class="crono-fila">
+            <div class="crono-nombre"><b>3. Marca dividida en dos campañas</b><span>Adcom, hecho</span></div>
+            <div class="crono-pista" title="Marca dividida en dos campañas: 16 nov a 16 nov">
+              <i class="is-accent" style="left:0.000%;width:25.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div><div class="crono-fila">
+            <div class="crono-nombre"><b>4. Pasar los grupos viejos a la campaña nueva</b><span>Adcom, con los anuncios aprobados</span></div>
+            <div class="crono-pista" title="Pasar los grupos viejos a la campaña nueva: 16 nov a 23 nov">
+              <i style="left:0.000%;width:50.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div><div class="crono-fila">
+            <div class="crono-nombre"><b>5. Objetivo de Marca a 14</b><span>Adcom, tras leer la semana</span></div>
+            <div class="crono-pista" title="Objetivo de Marca a 14: 23 nov a 23 nov">
+              <i style="left:25.000%;width:25.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div><div class="crono-fila">
+            <div class="crono-nombre"><b>6. Objetivo de Performance Max</b><span>Adcom, con las conversiones recuperadas</span></div>
+            <div class="crono-pista" title="Objetivo de Performance Max: 23 nov a 30 nov">
+              <i style="left:25.000%;width:50.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div><div class="crono-fila">
+            <div class="crono-nombre"><b>7. Prueba de marca 50 / 50</b><span>Adcom, cuatro semanas</span></div>
+            <div class="crono-pista" title="Prueba de marca 50 / 50: 23 nov a 7 dic">
+              <i style="left:25.000%;width:75.000%"></i><u style="left:calc(25.000% - 1px)"></u><u style="left:calc(50.000% - 1px)"></u><u style="left:calc(75.000% - 1px)"></u>
+            </div>
+          </div>
+          </div>
+        </div>
+        <figcaption>Semanas que empiezan el lunes indicado.</figcaption>
+        <details class="datos">
+          <summary>Ver los datos</summary>
+          
+      
+      <div class="table-scroll">
+        <table>
+          
+          <thead><tr><th scope="col">Accion</th><th scope="col">Quien</th><th scope="col">Desde la semana del</th><th scope="col">Hasta la semana del</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1. Competidores fuera de la cuenta</th><td>Adcom, hecho</td><td>16 nov</td><td>16 nov</td></tr><tr><th scope="row">2. Objetivo de retorno de Marca y Slots</th><td>Adcom, hecho</td><td>16 nov</td><td>16 nov</td></tr><tr><th scope="row">3. Marca dividida en dos campañas</th><td>Adcom, hecho</td><td>16 nov</td><td>16 nov</td></tr><tr><th scope="row">4. Pasar los grupos viejos a la campaña nueva</th><td>Adcom, con los anuncios aprobados</td><td>16 nov</td><td>23 nov</td></tr><tr><th scope="row">5. Objetivo de Marca a 14</th><td>Adcom, tras leer la semana</td><td>23 nov</td><td>23 nov</td></tr><tr><th scope="row">6. Objetivo de Performance Max</th><td>Adcom, con las conversiones recuperadas</td><td>23 nov</td><td>30 nov</td></tr><tr><th scope="row">7. Prueba de marca 50 / 50</th><td>Adcom, cuatro semanas</td><td>23 nov</td><td>7 dic</td></tr>
+          </tbody>
+        </table>
+      </div>
+        </details>
+      </figure>
+      </div>
+
+      <div class="pieza">
+        <div class="rules">
+        <div class="rule-col">
+          <h3>Competidores fuera</h3>
+          <span class="note">Adcom, hecho</span>
+          <ol>
+            <li><p>26 palabras pausadas con nombres de competidores se quitaron de la cuenta.</p></li>
+            <li><p>32 términos de competidores se niegan en las 12 campañas de búsqueda y Performance Max, para que no entren por coincidencia amplia.</p></li>
+            <li><p>Entraban con poco clic y pocos registros: menos del 0,2% del gasto.</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>Objetivos de retorno</h3>
+          <span class="note">Adcom, hecho</span>
+          <ol>
+            <li><p>Marca de 20 a 16, y a 14 hacia el 24 de noviembre si el gasto y el retorno acompañan.</p></li>
+            <li><p>Slots de 10,5 a 8. Performance Max, Casino, Apuestas, Liga y Shadow no cambian.</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>Marca dividida</h3>
+          <span class="note">Adcom, hecho</span>
+          <ol>
+            <li><p>Marca sigue con el nombre solo, casi toda la inversión, y con la etiqueta de búsqueda paga estándar en los anuncios nuevos.</p></li>
+            <li><p>Nace «Marca Modificadores», pequeña, con los grupos de apuestas, Liga y Puntos BetPlay, y un objetivo de retorno propio (10).</p></li>
+            <li><p>Los grupos viejos se pausan cuando Google apruebe los anuncios nuevos, para que ninguna búsqueda se quede sin servir.</p></li>
+          </ol>
+        </div><div class="rule-col">
+          <h3>Prueba y seguimiento</h3>
+          <span class="note">Adcom, uso interno</span>
+          <ol>
+            <li><p>Prueba 50 / 50 en Marca durante cuatro semanas para saber cuántos de esos registros son nuevos y cuántos habrían llegado igual.</p></li>
+            <li><p>Aviso semanal si el costo por registro de Analytics pasa 1,5 veces el objetivo tres días seguidos.</p></li>
+            <li><p>Recomendación para BetPlay: contar los registros completados por día desde sus sistemas, para compararlos con los de Analytics.</p></li>
+          </ol>
+        </div>
+      </div>
+      </div>
+      
+    </section>
+
+      <footer class="footer">
+        <span>BetPlay &middot; Google Ads: ruta del costo por registro &middot; noviembre de 2026</span>
+        <span>Preparado con datos de Analytics y Google Ads al 19 de noviembre de 2026</span>
+      </footer>
+    </main>
+  </div>
+  <script>
+  (function tablasOrdenables(){
+    var tablas = document.querySelectorAll('table[data-ordenable]');
+    if (!tablas.length) return;
+
+    // El valor para ordenar no se lee del texto: "1.039.192" y "6.932.356" se
+    // comparan mal como cadenas. Cada celda trae data-v con el numero crudo.
+    function valor(fila, i){
+      var c = fila.children[i];
+      var v = c && c.getAttribute('data-v');
+      return v === null || v === undefined ? c.textContent.trim().toLowerCase() : parseFloat(v);
+    }
+
+    Array.prototype.forEach.call(tablas, function(tabla){
+      var cabeceras = tabla.querySelectorAll('thead th');
+      var cuerpo = tabla.tBodies[0];
+      var original = Array.prototype.slice.call(cuerpo.rows);
+
+      Array.prototype.forEach.call(cabeceras, function(th, i){
+        th.classList.add('orden');
+        var etiqueta = th.textContent.trim();
+        th.innerHTML = '<button type="button">' + etiqueta +
+          '<svg class="ico ico-sm" aria-hidden="true"><use href="#i-abajo"></use></svg></button>';
+
+        th.querySelector('button').addEventListener('click', function(){
+          var actual = th.getAttribute('aria-sort');
+          // Tercer clic: vuelve al orden de origen, que dice algo por si mismo.
+          if (actual === 'ascending'){
+            Array.prototype.forEach.call(cabeceras, function(o){ o.removeAttribute('aria-sort'); });
+            original.forEach(function(f){ cuerpo.appendChild(f); });
+            return;
+          }
+          var desc = actual !== 'descending';
+          Array.prototype.forEach.call(cabeceras, function(o){ o.removeAttribute('aria-sort'); });
+          th.setAttribute('aria-sort', desc ? 'descending' : 'ascending');
+
+          Array.prototype.slice.call(cuerpo.rows).sort(function(a, b){
+            var x = valor(a, i), y = valor(b, i);
+            if (x < y) return desc ? 1 : -1;
+            if (x > y) return desc ? -1 : 1;
+            return 0;
+          }).forEach(function(f){ cuerpo.appendChild(f); });
+        });
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

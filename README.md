@@ -20,6 +20,7 @@ carpetas temáticas y se enlazan desde la portada.
 | [Optimizaciones de Google · Septiembre 2026](google/optimizaciones-2026-09.html) | `google/optimizaciones-2026-09.html` |
 | [Optimizaciones de Google · Octubre 2026](google/optimizaciones-2026-10.html) | `google/optimizaciones-2026-10.html` |
 | [Registros de Directo y Google · Noviembre 2026](google/conversiones-2026-11.html) | `google/conversiones-2026-11.html` |
+| [Ruta para bajar el costo por registro · Noviembre 2026](google/ruta-cpa-2026-11.html) | `google/ruta-cpa-2026-11.html` |
 | [Medición del primer depósito](medicion/primer-deposito.html) | `medicion/primer-deposito.html` |
 | [Resultados de TikTok · Septiembre 2026](tiktok/resultados-2026-09.html) | `tiktok/resultados-2026-09.html` |
 | [Plan de inversión · 2027](planes/inversion-2027.html) | `planes/inversion-2027.html` |
